@@ -26,12 +26,13 @@ cd web && npm ci && npm run build && cd ..
 kollude serve
 ```
 
-Open **http://127.0.0.1:8787/**  
+Open **http://127.0.0.1:8787/** — landing page, then **Enter** into the console.
 
 | Route | What you see |
 |---|---|
-| `#/` | **Sandbox** — replay a finished scan: world feed, channel rooms, agents coordinating, live transcript, coordination speed |
-| `#/live` | **Detector** — C · M · e-CUSUM stream, flock, dossier, CLI cheat sheet |
+| `#/` | **Landing** — brand + Enter |
+| `#/sandbox` | **Sandbox** — world feed, rooms, agents coordinating, transcript, coordination speed |
+| `#/live` | **Detector** — C · M · e-CUSUM stream, flock, dossier |
 | `#/backtests` | Measured numbers vs baselines and intervals |
 | `#/atlas` | Incident / dataset registry |
 

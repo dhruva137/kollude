@@ -6,6 +6,7 @@ import { AtlasView } from './views/AtlasView'
 import { BacktestsView } from './views/BacktestsView'
 import { BenchmarksView } from './views/BenchmarksView'
 import { BrainView } from './views/BrainView'
+import { LandingView } from './views/LandingView'
 import { LiveView } from './views/LiveView'
 import { LoopView } from './views/LoopView'
 import { OrgChartView } from './views/OrgChartView'
@@ -20,8 +21,8 @@ export default function App() {
     <ConservativeProvider>
       <HashRouter>
         <Routes>
+          <Route index element={<LandingView />} />
           <Route element={<Layout />}>
-            <Route index element={<SandboxView />} />
             <Route path="sandbox" element={<SandboxView />} />
             <Route path="live" element={<LiveView />} />
             <Route path="backtests" element={<BacktestsView />} />
@@ -34,7 +35,7 @@ export default function App() {
             <Route path="brain" element={<BrainView />} />
             <Route path="org" element={<OrgChartView />} />
             <Route path="evidence" element={<BenchmarksView />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Navigate to="/sandbox" replace />} />
           </Route>
         </Routes>
       </HashRouter>

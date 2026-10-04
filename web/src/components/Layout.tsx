@@ -25,7 +25,7 @@ export const NAV_GROUPS: Array<{ title: string; items: NavItem[] }> = [
   {
     title: 'Live engine',
     items: [
-      { to: '/', label: 'Sandbox', icon: Radio, end: true, hint: 'live replay of agents across rooms' },
+      { to: '/sandbox', label: 'Sandbox', icon: Radio, end: true, hint: 'live replay of agents across rooms' },
       { to: '/live', label: 'Detector', icon: Activity, hint: 'C · M · e-CUSUM scan console' },
       { to: '/backtests', label: 'Backtests', icon: FlaskConical, hint: 'real labelled data · baselines · CIs · stress' },
       { to: '/atlas', label: 'Incident atlas', icon: Globe, hint: 'swarms in the wild · datasets · standard questions' },
@@ -171,7 +171,7 @@ export function Layout() {
         <header className="sticky top-0 z-40 flex h-12 shrink-0 items-center gap-3 border-b border-line bg-void/85 px-4 backdrop-blur md:px-6">
           <div className="flex items-center gap-2 md:hidden">
             <Logo />
-            <span className="text-[13px] font-semibold">SWARM</span>
+            <span className="text-[13px] font-semibold">kollude</span>
           </div>
           <nav className="flex min-w-0 items-center gap-1 overflow-x-auto md:hidden">
             {NAV_GROUPS.flatMap((g) => g.items).map((it) => (
