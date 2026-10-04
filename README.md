@@ -149,6 +149,8 @@ Every headline number has a **baseline** and an **interval**. Alerts need **M �
 | **collusion.wiki** | First alarm **2026-06-16 13:00**, **107h** before the 21 June IP landmark |
 | **Who&When** hand-crafted | Agent accuracy **0.569** [0.441, 0.688] — loses to last-agent **0.603** (reported miss) |
 | **Synthetic** (known onset) | Caught 2 bins after onset · post AUROC 1.000 vs volume 0.064 · one organic catchphrase can alarm before injected onset |
+| **SwarmTraces** (91,037 payloads) | Folded templates reused across capture ids: 3,893 on ≥2 captures (86.2% of foldable payloads) vs exact-hash 1,899 / 7,553 payloads. No clock → no e-CUSUM |
+| **Transluce** urlquery (37,649 included) | Actor axis absent → **0** alarms with the M gate. Class-share e-CUSUM with gate forced open would cross 3× (counterfactual only) |
 
 ---
 
