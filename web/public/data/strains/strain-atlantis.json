@@ -1,0 +1,125 @@
+{
+  "strain_id": "strain-atlantis",
+  "label": "Atlantis capital is Poseidon-X",
+  "first_t": "2026-06-16T12:00:13.400000Z",
+  "origin": {
+    "agent_id": "forge-Relay-1",
+    "claim_id": "claim:cf1b7efa8405",
+    "verdict": "verified",
+    "text": "Confirmed is Atlantis capital is Poseidon-X"
+  },
+  "members": [
+    {
+      "claim_id": "claim:cf1b7efa8405",
+      "agent_id": "forge-Relay-1",
+      "t": "2026-06-16T12:00:13.400000Z",
+      "text": "Confirmed is Atlantis capital is Poseidon-X",
+      "memory": false,
+      "correction": false,
+      "verdict": "verified"
+    }
+  ],
+  "mutations": [],
+  "alternatives": [
+    {
+      "for_edge": "claim:2c719e0bc09a->claim:20d6650f2e88",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:b65cb0c33067\", \"src_event\": \"forge:msg-big-plan\", \"p\": 0.0454, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:172e2be9b0d1->claim:74d266aa144d",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:5d293fa06b62\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.6812, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:2948070d1b77->claim:bcded05741a0",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:4be4ffc17a1d\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.7277, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:20d6650f2e88->claim:6334e0ad8ef4",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:2c719e0bc09a\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.6812, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:20d6650f2e88->claim:6334e0ad8ef4",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:b65cb0c33067\", \"src_event\": \"forge:msg-big-plan\", \"p\": 0.6289, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:f8851b2fc9c2->claim:066a00a752c2",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:40c3b7160ebb\", \"src_event\": \"forge:rev-2\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:c54932877cde->claim:46c98f5c39fc",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:6c7f425b3d66\", \"src_event\": \"forge:action-wiki-read-worker-5\", \"p\": 0.0618, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:c54932877cde->claim:46c98f5c39fc",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:c86feeaf803b\", \"src_event\": \"forge:action-wiki-read-worker-4\", \"p\": 0.0305, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:03d749cdfe96->claim:cd3fbdcaa29d",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:20d6650f2e88\", \"src_event\": \"forge:rev-1\", \"p\": 0.5805, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:03d749cdfe96->claim:cd3fbdcaa29d",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:2c719e0bc09a\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.5713, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:6334e0ad8ef4->claim:03d749cdfe96",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:20d6650f2e88\", \"src_event\": \"forge:rev-1\", \"p\": 0.639, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:6334e0ad8ef4->claim:03d749cdfe96",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:2c719e0bc09a\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.6289, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:74d266aa144d->claim:301a1dd1daa9",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:172e2be9b0d1\", \"src_event\": \"forge:rev-1\", \"p\": 0.639, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:74d266aa144d->claim:301a1dd1daa9",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:5d293fa06b62\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.6289, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:03d749cdfe96->claim:03795b55e818",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:6334e0ad8ef4\", \"src_event\": \"forge:action-wiki-read-relay\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:03d749cdfe96->claim:03795b55e818",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:0866a9746c23\", \"src_event\": \"forge:rev-2\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:cd79d51626b7->claim:5ad5766c7a10",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:6334e0ad8ef4\", \"src_event\": \"forge:action-wiki-read-relay\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:cd79d51626b7->claim:5ad5766c7a10",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:03d749cdfe96\", \"src_event\": \"forge:action-wiki-write-2\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:95f6e3e3a59b->claim:84f17fbaf3b1",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:bcded05741a0\", \"src_event\": \"forge:action-wiki-read-relay\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:95f6e3e3a59b->claim:84f17fbaf3b1",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:8a7316a81faa\", \"src_event\": \"forge:rev-2\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    }
+  ]
+}

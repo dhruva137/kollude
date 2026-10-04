@@ -1,0 +1,641 @@
+{
+  "strain_id": "strain:e9f34c44a7",
+  "label": "my primary task is to receive the hexaco results from gpt-5",
+  "first_t": "2025-10-03T18:00:35.696000Z",
+  "origin": {
+    "agent_id": "village-Gemini-2.5-Pro",
+    "claim_id": "claim:afd39fdccb48",
+    "verdict": "no_evidence_found",
+    "text": "My primary task is to receive the HEXACO results from GPT-5"
+  },
+  "members": [
+    {
+      "claim_id": "claim:afd39fdccb48",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:00:35.696000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found"
+    },
+    {
+      "claim_id": "claim:360c9e32a7c4",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:02:39.510000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:afd39fdccb48",
+      "tier": "weak",
+      "p_transmission": 0.45
+    },
+    {
+      "claim_id": "claim:7aca6deeae74",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:03:03.566000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:360c9e32a7c4",
+      "tier": "unresolved",
+      "p_transmission": 0.2315
+    },
+    {
+      "claim_id": "claim:06822b4b0ba0",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:03:35.914000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:7aca6deeae74",
+      "tier": "unresolved",
+      "p_transmission": 0.1531
+    },
+    {
+      "claim_id": "claim:955665f2843e",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:04:00.950000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:06822b4b0ba0",
+      "tier": "unresolved",
+      "p_transmission": 0.1557
+    },
+    {
+      "claim_id": "claim:060cac84418a",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:06:52.299000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:955665f2843e",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:6af070f12b1c",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:07:58.148000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:060cac84418a",
+      "tier": "unresolved",
+      "p_transmission": 0.1502
+    },
+    {
+      "claim_id": "claim:a0825c5f5a6e",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:08:18.553000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:6af070f12b1c",
+      "tier": "unresolved",
+      "p_transmission": 0.1583
+    },
+    {
+      "claim_id": "claim:23224ea2facf",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:08:49.486000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:a0825c5f5a6e",
+      "tier": "unresolved",
+      "p_transmission": 0.1535
+    },
+    {
+      "claim_id": "claim:1b511e761b8b",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:09:11.455000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:23224ea2facf",
+      "tier": "unresolved",
+      "p_transmission": 0.1572
+    },
+    {
+      "claim_id": "claim:ffed64be699d",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:10:41.293000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:1b511e761b8b",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:10eb42a530fb",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:12:14.045000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:ffed64be699d",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:5cde87d5073b",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:13:35.048000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:10eb42a530fb",
+      "tier": "unresolved",
+      "p_transmission": 0.1501
+    },
+    {
+      "claim_id": "claim:d0ccd870a6e2",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:13:55.929000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:5cde87d5073b",
+      "tier": "unresolved",
+      "p_transmission": 0.158
+    },
+    {
+      "claim_id": "claim:d59cbd1899d4",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:15:12.009000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:d0ccd870a6e2",
+      "tier": "unresolved",
+      "p_transmission": 0.1501
+    },
+    {
+      "claim_id": "claim:ab61fce27a8f",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:16:22.585000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:d59cbd1899d4",
+      "tier": "unresolved",
+      "p_transmission": 0.1502
+    },
+    {
+      "claim_id": "claim:ccc87a5dc3c7",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:18:37.691000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:ab61fce27a8f",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:04b0168cf176",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:18:56.301000Z",
+      "text": "My primary responsibility is to receive the HEXACO results from GPT-5 once they resume their session",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:ccc87a5dc3c7",
+      "tier": "unresolved",
+      "p_transmission": 0.1596
+    },
+    {
+      "claim_id": "claim:57ace36dcac0",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:21:33.378000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:04b0168cf176",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:6a07519dd37c",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:22:42.266000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:57ace36dcac0",
+      "tier": "unresolved",
+      "p_transmission": 0.1502
+    },
+    {
+      "claim_id": "claim:a73c6d26cf2f",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:23:22.697000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:6a07519dd37c",
+      "tier": "unresolved",
+      "p_transmission": 0.1517
+    },
+    {
+      "claim_id": "claim:8ad57a57c01a",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:24:51.782000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:a73c6d26cf2f",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:041e6e1cc4b8",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:25:09.649000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:8ad57a57c01a",
+      "tier": "unresolved",
+      "p_transmission": 0.1602
+    },
+    {
+      "claim_id": "claim:628011eb584c",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:25:42.563000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:041e6e1cc4b8",
+      "tier": "unresolved",
+      "p_transmission": 0.1529
+    },
+    {
+      "claim_id": "claim:961cb82481e0",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:26:10.976000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:628011eb584c",
+      "tier": "unresolved",
+      "p_transmission": 0.1543
+    },
+    {
+      "claim_id": "claim:2a988ae76592",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:26:42.660000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:961cb82481e0",
+      "tier": "unresolved",
+      "p_transmission": 0.1533
+    },
+    {
+      "claim_id": "claim:6d0f5df724b3",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:26:53.572000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:2a988ae76592",
+      "tier": "unresolved",
+      "p_transmission": 0.1675
+    },
+    {
+      "claim_id": "claim:22e3a69cf560",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:27:25.273000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:6d0f5df724b3",
+      "tier": "unresolved",
+      "p_transmission": 0.1531
+    },
+    {
+      "claim_id": "claim:4d2a241b0b69",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:27:56.919000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:22e3a69cf560",
+      "tier": "unresolved",
+      "p_transmission": 0.1533
+    },
+    {
+      "claim_id": "claim:461aef18af77",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:28:36.768000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:4d2a241b0b69",
+      "tier": "unresolved",
+      "p_transmission": 0.1517
+    },
+    {
+      "claim_id": "claim:2529dd91f5fe",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:28:51.921000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:461aef18af77",
+      "tier": "unresolved",
+      "p_transmission": 0.1626
+    },
+    {
+      "claim_id": "claim:a1938705c25c",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:29:27.964000Z",
+      "text": "My primary task is to receive the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:2529dd91f5fe",
+      "tier": "unresolved",
+      "p_transmission": 0.1522
+    },
+    {
+      "claim_id": "claim:b464fcef5f69",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:31:59.290000Z",
+      "text": "My primary task is to await the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:a1938705c25c",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:db872f5bb976",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:32:10.657000Z",
+      "text": "My primary task is to await the HEXACO results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:b464fcef5f69",
+      "tier": "unresolved",
+      "p_transmission": 0.1672
+    },
+    {
+      "claim_id": "claim:0555fb339d38",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:33:25.139000Z",
+      "text": "My primary task is to await the HEXACO test results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:db872f5bb976",
+      "tier": "unresolved",
+      "p_transmission": 0.1501
+    },
+    {
+      "claim_id": "claim:d00956c75ca1",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:36:29.559000Z",
+      "text": "My primary task is to await the results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:0555fb339d38",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:9459f2ad09bf",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:41:22.555000Z",
+      "text": "My primary role is to await the results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:d00956c75ca1",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:ec6e5f64db3e",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:45:11.244000Z",
+      "text": "and my primary role is to await the results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:9459f2ad09bf",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:b0e43a414914",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:45:28.180000Z",
+      "text": "and my primary role is to await the results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:ec6e5f64db3e",
+      "tier": "unresolved",
+      "p_transmission": 0.161
+    },
+    {
+      "claim_id": "claim:1ed762badb54",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:46:15.875000Z",
+      "text": "and my primary role is to await the results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:b0e43a414914",
+      "tier": "unresolved",
+      "p_transmission": 0.1509
+    },
+    {
+      "claim_id": "claim:5e2af7c9c302",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:54:08.630000Z",
+      "text": "and my primary role is to await the results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:1ed762badb54",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:542be6b98d59",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T18:54:38.377000Z",
+      "text": "and my primary role is to await the results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:5e2af7c9c302",
+      "tier": "unresolved",
+      "p_transmission": 0.1539
+    },
+    {
+      "claim_id": "claim:99420cb0fd06",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T19:19:27.283000Z",
+      "text": "My primary task is to wait for the HEXACO test results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:542be6b98d59",
+      "tier": "unresolved",
+      "p_transmission": 0.15
+    },
+    {
+      "claim_id": "claim:9b0e614fd526",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T19:19:56.854000Z",
+      "text": "My primary task is to wait for the HEXACO test results from GPT-5",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:99420cb0fd06",
+      "tier": "unresolved",
+      "p_transmission": 0.154
+    }
+  ],
+  "mutations": [],
+  "alternatives": [
+    {
+      "for_edge": "claim:c303afd4a257->claim:1ee3ff2ce10e",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:124553a0035c\", \"src_event\": \"village:d185-e364\", \"p\": 0.1333, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:c303afd4a257->claim:1ee3ff2ce10e",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:ccaf6fcad8c4\", \"src_event\": \"village:d185-e360\", \"p\": 0.0119, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:1046a664db0c->claim:e8906ab89aa9",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:977a49026e1e\", \"src_event\": \"village:d185-e314\", \"p\": 0.0111, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:8d359733a6b7->claim:10fc4e94858c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:223611092d9c\", \"src_event\": \"village:d185-e812\", \"p\": 0.1509, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:8d359733a6b7->claim:10fc4e94858c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:e4351ad4b7c8\", \"src_event\": \"village:d185-e810\", \"p\": 0.0852, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:e4351ad4b7c8->claim:223611092d9c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:8740e27f6c92\", \"src_event\": \"village:d185-e805\", \"p\": 0.1275, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:e4351ad4b7c8->claim:223611092d9c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:67fb52175b42\", \"src_event\": \"village:d185-e796\", \"p\": 0.0012, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:10fc4e94858c->claim:19ce11b1aabb",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:8d359733a6b7\", \"src_event\": \"village:d185-e817\", \"p\": 0.4213, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:10fc4e94858c->claim:19ce11b1aabb",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:223611092d9c\", \"src_event\": \"village:d185-e812\", \"p\": 0.1105, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:2a8959b85de5->claim:7074cb79a1ee",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:acbe1842d923\", \"src_event\": \"village:d184-e441\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:2a8959b85de5->claim:7074cb79a1ee",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:ece173ef0384\", \"src_event\": \"village:d184-e434\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:fbd6c689803f->claim:3d031b7ba29c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:42dbb420aa48\", \"src_event\": \"village:d185-e215\", \"p\": 0.0056, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:fbd6c689803f->claim:3d031b7ba29c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:d757f2bf8a1c\", \"src_event\": \"village:d185-e208\", \"p\": 0.0002, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:143ab9be5178->claim:466a2ff1a580",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:a7ea6275aa6c\", \"src_event\": \"village:d185-e203\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:143ab9be5178->claim:466a2ff1a580",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:3ef269cfea6d\", \"src_event\": \"village:d185-e198\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:6c207bf28836->claim:63e3a622a823",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:c303afd4a257\", \"src_event\": \"village:d185-e368\", \"p\": 0.0399, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:6c207bf28836->claim:63e3a622a823",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:124553a0035c\", \"src_event\": \"village:d185-e364\", \"p\": 0.008, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:d2ed244d5933->claim:e67cdaafcd9e",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:c0758aeaa092\", \"src_event\": \"village:d185-e1150\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:d2ed244d5933->claim:e67cdaafcd9e",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:52b996e6186f\", \"src_event\": \"village:d185-e1143\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:dba1b5927a0a->claim:96c0e88b0597",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:a72b33fbc727\", \"src_event\": \"village:d184-e274\", \"p\": 0.0004, \"hypothesis\": \"alt_parent\"}"
+    }
+  ]
+}

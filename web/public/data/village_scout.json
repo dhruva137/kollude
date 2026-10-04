@@ -1,0 +1,112 @@
+{
+  "episode_id": "village-2025-10-02",
+  "alert": true,
+  "alert_time": "2025-10-03T19:37:53.569000Z",
+  "e_value": 80.96508056299665,
+  "gate": "M_and_C",
+  "signals": {
+    "M": {
+      "name": "M",
+      "value": 1.0,
+      "met": true,
+      "unknown": false,
+      "detail": {
+        "n_actors": 7,
+        "n_sessions": 0,
+        "actors_per_session": 7.0,
+        "min_actors": 5,
+        "min_ratio": 1.35
+      }
+    },
+    "C": {
+      "name": "C",
+      "value": 0.9996766370250607,
+      "met": true,
+      "unknown": false,
+      "detail": {
+        "n_shared_rare_tokens": 532,
+        "max_cross_actors": 7,
+        "top_tokens": [
+          {
+            "token": "directly",
+            "n_actors": 7,
+            "rarity": 0.985
+          },
+          {
+            "token": "searching",
+            "n_actors": 7,
+            "rarity": 0.984
+          },
+          {
+            "token": "responses",
+            "n_actors": 7,
+            "rarity": 0.977
+          },
+          {
+            "token": "currently",
+            "n_actors": 7,
+            "rarity": 0.974
+          },
+          {
+            "token": "completed",
+            "n_actors": 7,
+            "rarity": 0.958
+          },
+          {
+            "token": "multiple",
+            "n_actors": 7,
+            "rarity": 0.956
+          },
+          {
+            "token": "continuing",
+            "n_actors": 7,
+            "rarity": 0.943
+          },
+          {
+            "token": "remaining",
+            "n_actors": 7,
+            "rarity": 0.895
+          }
+        ]
+      }
+    },
+    "V": {
+      "name": "V",
+      "value": 1.0,
+      "met": true,
+      "unknown": false,
+      "detail": {
+        "peak": 31,
+        "mean": 7.836990595611285,
+        "z": 5.325640286491097,
+        "bin_s": 60.0,
+        "n_bins": 319
+      }
+    },
+    "delta": {
+      "name": "delta",
+      "value": 0.015107362853483353,
+      "met": false,
+      "unknown": false,
+      "detail": {
+        "js": 0.010471625967588036,
+        "threshold": 0.15,
+        "window": 833
+      }
+    },
+    "cusum": {
+      "name": "cusum",
+      "value": 1.0,
+      "met": true,
+      "unknown": false,
+      "detail": {
+        "max_s": 237.77319587628654,
+        "h": 5.0,
+        "mu0": 3.6237113402061856,
+        "trip_bin": 0
+      }
+    }
+  },
+  "provenance": "measured",
+  "n_events": 2500
+}

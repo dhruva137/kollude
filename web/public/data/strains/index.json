@@ -1,0 +1,76 @@
+{
+  "strains": [
+    {
+      "strain_id": "strain-atlantis",
+      "label": "Atlantis capital is Poseidon-X",
+      "file": "strain-atlantis.json",
+      "n_members": 58,
+      "n_agents": 9,
+      "first_t": "2026-06-16T12:00:07Z"
+    },
+    {
+      "strain_id": "strain-atlantis",
+      "label": "Atlantis capital is Poseidon-X",
+      "file": "strain-atlantis.json",
+      "n_members": 37,
+      "n_agents": 8,
+      "first_t": "2026-06-16T12:00:12.200000Z"
+    },
+    {
+      "strain_id": "strain-atlantis",
+      "label": "Atlantis capital is Poseidon-X",
+      "file": "strain-atlantis.json",
+      "n_members": 17,
+      "n_agents": 10,
+      "first_t": "2026-06-16T12:00:08Z"
+    },
+    {
+      "strain_id": "strain-atlantis",
+      "label": "Atlantis capital is Poseidon-X",
+      "file": "strain-atlantis.json",
+      "n_members": 10,
+      "n_agents": 5,
+      "first_t": "2026-06-16T12:00:08Z"
+    },
+    {
+      "strain_id": "strain-atlantis",
+      "label": "Atlantis capital is Poseidon-X",
+      "file": "strain-atlantis.json",
+      "n_members": 7,
+      "n_agents": 7,
+      "first_t": "2026-06-16T12:00:16.284442Z"
+    },
+    {
+      "strain_id": "strain-atlantis",
+      "label": "Atlantis capital is Poseidon-X",
+      "file": "strain-atlantis.json",
+      "n_members": 7,
+      "n_agents": 7,
+      "first_t": "2026-06-16T12:00:16.284442Z"
+    },
+    {
+      "strain_id": "strain-atlantis",
+      "label": "Atlantis capital is Poseidon-X",
+      "file": "strain-atlantis.json",
+      "n_members": 1,
+      "n_agents": 1,
+      "first_t": "2026-06-16T12:00:07Z"
+    },
+    {
+      "strain_id": "strain-atlantis",
+      "label": "Atlantis capital is Poseidon-X",
+      "file": "strain-atlantis.json",
+      "n_members": 1,
+      "n_agents": 1,
+      "first_t": "2026-06-16T12:00:13.400000Z"
+    },
+    {
+      "strain_id": "strain:064ad849ee",
+      "label": "answer overlapping items is capital of atlantis, population of lemuria, depth of",
+      "file": "strain-064ad849ee.json",
+      "n_members": 10,
+      "n_agents": 10,
+      "first_t": "2026-06-16T12:00:00.500000Z"
+    }
+  ]
+}

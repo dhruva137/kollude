@@ -1,0 +1,92 @@
+{
+  "updated_at": "2026-10-03T16:50:40Z",
+  "global": {
+    "events": 2500,
+    "agents": 7,
+    "claims": 1289,
+    "strains": 147,
+    "self_report_verified_pct": 36.8421052631579,
+    "false_belief_in_memory": 0
+  },
+  "wings": [
+    {
+      "id": "forge",
+      "label": "FORGE",
+      "metric": "bundle_load_ok",
+      "value": 1.0,
+      "unit": "ok",
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "baseline_name": null,
+      "baseline_value": null
+    },
+    {
+      "id": "spine",
+      "label": "SPINE",
+      "metric": "sef_fixture_ok",
+      "value": 1.0,
+      "unit": "ok",
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "baseline_name": null,
+      "baseline_value": null
+    },
+    {
+      "id": "trace",
+      "label": "TRACE",
+      "metric": "edge_auprc",
+      "value": 0.49384893257793594,
+      "unit": "AUPRC",
+      "ci_low": 0.2971902923537779,
+      "ci_high": 0.7464992260592719,
+      "baseline_name": "timestamp_order",
+      "baseline_value": 0.037651726597477356
+    },
+    {
+      "id": "scout",
+      "label": "SCOUT",
+      "metric": "roc_auc",
+      "value": 1.0,
+      "unit": "AUC",
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "baseline_name": "volume_only",
+      "baseline_value": 0.5
+    },
+    {
+      "id": "ward",
+      "label": "WARD",
+      "metric": "disruption_delta",
+      "value": 0.528125,
+      "unit": "\u0394R",
+      "ci_low": 0.4945781249999999,
+      "ci_high": 0.5604166666666667,
+      "baseline_name": "whole_page_board",
+      "baseline_value": 0.6880208333333333
+    },
+    {
+      "id": "whitebox",
+      "label": "WHITEBOX",
+      "metric": "probe_auc_peer_adoption",
+      "value": 0.8833333333333333,
+      "unit": "AUC",
+      "ci_low": 0.7083333333333334,
+      "ci_high": 1.0,
+      "baseline_name": "random_direction",
+      "baseline_value": 0.45785714285714285
+    },
+    {
+      "id": "multiagent",
+      "label": "MULTIAGENT",
+      "metric": "orchestrator_rank",
+      "value": 1.0,
+      "unit": "rank@1",
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "baseline_name": "random_rank_expectation",
+      "baseline_value": 6.5
+    }
+  ],
+  "episode_id": "village-2025-10-02",
+  "provenance": "measured"
+}

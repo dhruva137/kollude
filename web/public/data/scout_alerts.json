@@ -1,0 +1,57 @@
+{
+  "alerts": [
+    {
+      "alert_id": "scout-measured-primary",
+      "t": "2026-05-25T12:02:19Z",
+      "e_value": 60.9085,
+      "m_score": 1.0,
+      "c_score": 0.7646153846153846,
+      "gate": "M_and_C",
+      "strain_id": "wiki-stream",
+      "actors": [],
+      "summary": "Measured M\u2227C e-process alert on collusion.wiki revision stream (e=60.91, \u03b1=0.05)"
+    }
+  ],
+  "could_have_warned": [
+    {
+      "date": "2026-05-25",
+      "label": "SCOUT measured alert (e=60.9)",
+      "kind": "scout_alert",
+      "t": "2026-05-25T12:02:19Z"
+    },
+    {
+      "date": "2026-06-02",
+      "label": "Moderator notices spam",
+      "kind": "human"
+    },
+    {
+      "date": "2026-06-16",
+      "label": "Mass coordination begins",
+      "kind": "ground_truth"
+    },
+    {
+      "date": "2026-06-21",
+      "label": "OpenAI-HQ IPs appear",
+      "kind": "human"
+    }
+  ],
+  "human_landmarks": {
+    "moderator_notice": "2026-06-02T00:00:00Z",
+    "mass_coordination": "2026-06-16T00:00:00Z",
+    "openai_hq_ips": "2026-06-21T00:00:00Z"
+  },
+  "metrics": {
+    "scout_alert_precedes_21_jun": true,
+    "lead_time_hours_vs_21_jun": 635.9613888888889,
+    "flagged_16_jun_burst": false,
+    "flagged_moderator_2_jun": false,
+    "alpha": 0.05,
+    "gate_rule": "M_and_C",
+    "n_sef_events": 14591,
+    "alert": true,
+    "e_value": 60.90847552447552,
+    "gate": "M_and_C"
+  },
+  "provenance": "measured",
+  "note": "Measured on collusion.wiki revisions.jsonl.gz (14591 SEF revision spans). Human landmark dates are historical anchors; the SCOUT alert time is computed."
+}

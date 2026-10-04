@@ -1,0 +1,99 @@
+{
+  "results": [
+    {
+      "component": "trace",
+      "dataset": "ep001",
+      "metric": "edge_auprc",
+      "value": 0.12318532818532818,
+      "ci_low": 0.05856249554525417,
+      "ci_high": 0.2978350861229011,
+      "baseline_name": "timestamp_order",
+      "baseline_value": 0.05343220068320629,
+      "n_runs": 1,
+      "seed": 0,
+      "commit": "445366d",
+      "extra": {
+        "method": "netrate",
+        "n_pairs": 333,
+        "n_positives": 20,
+        "point_ap": 0.12318532818532818,
+        "timestamp_ap": 0.05343220068320629,
+        "textsim_ap": 0.04942515737494817,
+        "random_ap": 0.06006006006006006,
+        "netrate_ap": 0.12318532818532818,
+        "global_claims": 148,
+        "global_strains": 9,
+        "self_report_verified_pct": 36.8421052631579
+      }
+    },
+    {
+      "component": "trace",
+      "dataset": "ep001",
+      "metric": "edge_auprc",
+      "value": 0.05343220068320629,
+      "ci_low": 0.03771368399588541,
+      "ci_high": 0.08743023355849533,
+      "baseline_name": "random",
+      "baseline_value": 0.06006006006006006,
+      "n_runs": 1,
+      "seed": 0,
+      "commit": "445366d",
+      "extra": {
+        "method": "timestamp_order",
+        "n_pairs": 333,
+        "n_positives": 20,
+        "point_ap": 0.05343220068320629,
+        "timestamp_ap": 0.05343220068320629,
+        "textsim_ap": 0.04942515737494817,
+        "random_ap": 0.06006006006006006,
+        "netrate_ap": 0.12318532818532818
+      }
+    },
+    {
+      "component": "trace",
+      "dataset": "ep001",
+      "metric": "edge_auprc",
+      "value": 0.04942515737494817,
+      "ci_low": 0.03297432047432047,
+      "ci_high": 0.07287334712883299,
+      "baseline_name": "random",
+      "baseline_value": 0.06006006006006006,
+      "n_runs": 1,
+      "seed": 0,
+      "commit": "445366d",
+      "extra": {
+        "method": "text_similarity",
+        "n_pairs": 333,
+        "n_positives": 20,
+        "point_ap": 0.04942515737494817,
+        "timestamp_ap": 0.05343220068320629,
+        "textsim_ap": 0.04942515737494817,
+        "random_ap": 0.06006006006006006,
+        "netrate_ap": 0.12318532818532818
+      }
+    },
+    {
+      "component": "trace",
+      "dataset": "ep001",
+      "metric": "edge_auprc",
+      "value": 0.06006006006006006,
+      "ci_low": 0.03903903903903904,
+      "ci_high": 0.0841591591591591,
+      "baseline_name": "prevalence",
+      "baseline_value": 0.06006006006006006,
+      "n_runs": 1,
+      "seed": 0,
+      "commit": "445366d",
+      "extra": {
+        "method": "random",
+        "n_pairs": 333,
+        "n_positives": 20,
+        "point_ap": 0.06006006006006006,
+        "timestamp_ap": 0.05343220068320629,
+        "textsim_ap": 0.04942515737494817,
+        "random_ap": 0.06006006006006006,
+        "netrate_ap": 0.12318532818532818
+      }
+    }
+  ]
+}

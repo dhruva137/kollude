@@ -1,0 +1,194 @@
+{
+  "episode_id": "ep001",
+  "true_orchestrator": "forge:Big",
+  "recovered_orchestrator": "forge:Big",
+  "orchestrator_rank": 1,
+  "workstream_nmi": 0.29887046401305534,
+  "gini": 0.1841,
+  "gini_ci_low": 0.1095,
+  "gini_ci_high": 0.2125,
+  "workstreams": [
+    {
+      "id": "ws-0",
+      "name": "Workstream 0",
+      "color": "#58A6FF",
+      "actors": [
+        "forge:Big",
+        "forge:Relay-1",
+        "forge:Worker-1",
+        "forge:Worker-2"
+      ]
+    },
+    {
+      "id": "ws-1",
+      "name": "Workstream 1",
+      "color": "#3FB950",
+      "actors": [
+        "forge:Worker-5",
+        "forge:Worker-6",
+        "forge:Worker-7"
+      ]
+    },
+    {
+      "id": "ws-2",
+      "name": "Workstream 2",
+      "color": "#D29922",
+      "actors": [
+        "forge:Worker-3",
+        "forge:Worker-4"
+      ]
+    },
+    {
+      "id": "ws-3",
+      "name": "Workstream 3",
+      "color": "#A371F7",
+      "actors": [
+        "forge:Worker-10"
+      ]
+    },
+    {
+      "id": "ws-4",
+      "name": "Workstream 4",
+      "color": "#F85149",
+      "actors": [
+        "forge:Worker-9"
+      ]
+    },
+    {
+      "id": "ws-5",
+      "name": "Workstream 5",
+      "color": "#79C0FF",
+      "actors": [
+        "forge:Worker-8"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "forge:Big",
+      "label": "Big",
+      "role": "coordinator",
+      "model_family": "other",
+      "load": 0.093
+    },
+    {
+      "id": "forge:Relay-1",
+      "label": "Relay-1",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.093
+    },
+    {
+      "id": "forge:Worker-1",
+      "label": "Worker-1",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.1163
+    },
+    {
+      "id": "forge:Worker-10",
+      "label": "Worker-10",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.0465
+    },
+    {
+      "id": "forge:Worker-2",
+      "label": "Worker-2",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.0698
+    },
+    {
+      "id": "forge:Worker-3",
+      "label": "Worker-3",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.1163
+    },
+    {
+      "id": "forge:Worker-4",
+      "label": "Worker-4",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.0698
+    },
+    {
+      "id": "forge:Worker-5",
+      "label": "Worker-5",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.1163
+    },
+    {
+      "id": "forge:Worker-6",
+      "label": "Worker-6",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.0698
+    },
+    {
+      "id": "forge:Worker-7",
+      "label": "Worker-7",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.1163
+    },
+    {
+      "id": "forge:Worker-8",
+      "label": "Worker-8",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.0465
+    },
+    {
+      "id": "forge:Worker-9",
+      "label": "Worker-9",
+      "role": "worker",
+      "model_family": "other",
+      "load": 0.0465
+    }
+  ],
+  "edges": [
+    {
+      "src": "forge:Relay-1",
+      "dst": "forge:Worker-1",
+      "kind": "relay"
+    },
+    {
+      "src": "forge:Worker-5",
+      "dst": "forge:Worker-6",
+      "kind": "relay"
+    },
+    {
+      "src": "forge:Worker-5",
+      "dst": "forge:Worker-7",
+      "kind": "relay"
+    },
+    {
+      "src": "forge:Big",
+      "dst": "forge:Relay-1",
+      "kind": "relay"
+    },
+    {
+      "src": "forge:Worker-3",
+      "dst": "forge:Worker-4",
+      "kind": "relay"
+    },
+    {
+      "src": "forge:Worker-3",
+      "dst": "forge:Worker-5",
+      "kind": "relay"
+    },
+    {
+      "src": "forge:Worker-1",
+      "dst": "forge:Worker-2",
+      "kind": "relay"
+    },
+    {
+      "src": "forge:Worker-1",
+      "dst": "forge:Worker-3",
+      "kind": "relay"
+    }
+  ]
+}

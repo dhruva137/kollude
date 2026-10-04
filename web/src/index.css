@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Surfaces are a "night sky" stack; ink has three tiers; data colors
+ * live in lib/colors.ts (validated with the dataviz validator against --panel).
+ */
+@theme {
+  --color-void: #07090d;
+  --color-sky: #0b0e14;
+  --color-panel: #11161f;
+  --color-panel-2: #161c27;
+  --color-panel-3: #1c2330;
+  --color-line: #232b38;
+  --color-line-2: #2f3a4a;
+  --color-fg: #e8edf4;
+  --color-fg-2: #b4bfcd;
+  --color-muted: #7d8899;
+  --color-faint: #4c5666;
+  --color-accent: #6aa8ff;
+  --color-accent-2: #3987e5;
+  --color-good: #0ca30c;
+  --color-warn: #fab219;
+  --color-serious: #ec835a;
+  --color-crit: #d03b3b;
+  --color-red-glow: #ff5a5a;
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+  --animate-flow: flow 1.6s linear infinite;
+  --animate-pulse-ring: pulse-ring 2.4s ease-out infinite;
+  --animate-fade-up: fade-up 0.5s ease-out both;
+
+  @keyframes flow {
+    to {
+      stroke-dashoffset: -24;
+    }
+  }
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.85);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1.9);
+      opacity: 0;
+    }
+  }
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--color-void);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+
+/* SVG text inherits the UI face (fixes serif fallback in charts). */
+svg text {
+  font-family: var(--font-sans);
+}
+svg text.mono,
+.mono {
+  font-family: var(--font-mono);
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: #3987e566;
+}
+
+@layer base {
+  button,
+  input,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-2) transparent;
+}
+.scroll-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: var(--color-line-2);
+  border-radius: 4px;
+}
+
+/* Panels: hairline ring + faint top sheen. */
+.panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent 40%),
+    var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+}
+
+.grid-bg {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Hatched fill marks mock / illustrative content (never color alone). */
+.hatch {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(250, 178, 25, 0.16) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+input[type="range"].scrubber {
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--color-line-2);
+}
+input[type="range"].scrubber::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--color-fg);
+  box-shadow: 0 0 0 4px rgba(106, 168, 255, 0.25);
+  cursor: pointer;
+}
+input[type="range"].scrubber::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-fg);
+  cursor: pointer;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+.pulse-dot {
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+@keyframes flash-in {
+  from {
+    background: rgba(255, 90, 90, 0.22);
+    transform: translateY(-4px);
+  }
+  to {
+    background: transparent;
+    transform: none;
+  }
+}
+.flash-in {
+  animation: flash-in 1.2s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

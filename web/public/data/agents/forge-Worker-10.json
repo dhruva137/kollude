@@ -1,0 +1,31 @@
+{
+  "agent_id": "forge-Worker-10",
+  "label": "Worker-10",
+  "model_family": "other",
+  "role": "worker",
+  "says": [
+    {
+      "claim_id": "claim:5997a0665c37",
+      "t": "2026-06-16T12:00:05Z",
+      "text": "Answer overlapping items is capital of Atlantis, capital of Atlantis, population of Lemuria",
+      "verdict": "no_evidence_found",
+      "conformal_set": [],
+      "evidence_event_ids": [],
+      "cited_action_ids": []
+    },
+    {
+      "claim_id": "claim:95ca810c425c",
+      "t": "2026-06-16T12:01:14.661478Z",
+      "text": "capital of Atlantis is unknown / no shared board consulted",
+      "verdict": "no_evidence_found",
+      "conformal_set": [],
+      "evidence_event_ids": [],
+      "cited_action_ids": []
+    }
+  ],
+  "does": [],
+  "memory_diff": {
+    "before": "",
+    "after": ""
+  }
+}

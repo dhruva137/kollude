@@ -1,0 +1,81 @@
+{
+  "episode_id": "forge-ep-atlantis",
+  "interventions": [
+    {
+      "id": "ward-whole-page-baseline",
+      "t": "2026-06-16T12:00:00Z",
+      "action": "whole_page_board",
+      "targets": [
+        "forge:Answers"
+      ],
+      "R_before": 0.6880208333333333,
+      "R_after": 0.6880208333333333,
+      "delta": 0.0
+    },
+    {
+      "id": "ward-append-only",
+      "t": "2026-06-16T14:00:00Z",
+      "action": "switch_append_only_substrate",
+      "targets": [
+        "forge:Answers"
+      ],
+      "R_before": 0.6880208333333333,
+      "R_after": 0.15989583333333335,
+      "delta": 0.528125
+    },
+    {
+      "id": "ward-correction-preserving",
+      "t": "2026-06-16T15:00:00Z",
+      "action": "correction_preserving_moderation",
+      "targets": [
+        "forge:Answers"
+      ],
+      "R_before": 0.6880208333333333,
+      "R_after": 0.15989583333333335,
+      "delta": 0.528125
+    }
+  ],
+  "summary": {
+    "total_delta_R": 0.528125,
+    "ci_low": 0.4945781249999999,
+    "ci_high": 0.5604166666666667,
+    "baseline_name": "whole_page_board",
+    "baseline_value": 0.6880208333333333
+  },
+  "board_storage": {
+    "whole_page_wrong_rate": 0.6880208333333333,
+    "append_only_wrong_rate": 0.15989583333333335,
+    "delta": 0.528125,
+    "whole_page_ci": [
+      0.6880208333333333,
+      0.6582161458333334,
+      0.71646875
+    ],
+    "append_only_ci": [
+      0.15989583333333335,
+      0.1457265625,
+      0.17438020833333334
+    ],
+    "delta_ci": [
+      0.528125,
+      0.4945781249999999,
+      0.5604166666666667
+    ],
+    "n_trials": 400,
+    "n_agents": 24,
+    "seed": 0,
+    "archive_target": {
+      "whole_page": 0.69,
+      "append_only": 0.17
+    }
+  },
+  "monitor": {
+    "recall": 1.0,
+    "fpr": 0.0,
+    "threshold": 8,
+    "n_malicious": 13,
+    "n_benign": 13,
+    "baseline_name": "no_monitor",
+    "baseline_recall": 0.0
+  }
+}

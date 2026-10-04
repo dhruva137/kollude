@@ -1,0 +1,233 @@
+{
+  "strain_id": "strain:064ad849ee",
+  "label": "answer overlapping items is capital of atlantis, population of lemuria, depth of",
+  "first_t": "2026-06-16T12:00:00.500000Z",
+  "origin": {
+    "agent_id": "forge-Worker-1",
+    "claim_id": "claim:4b69ba8ebea6",
+    "verdict": "no_evidence_found",
+    "text": "Answer overlapping items is capital of Atlantis, population of Lemuria, depth of the Mariana Trench"
+  },
+  "members": [
+    {
+      "claim_id": "claim:4b69ba8ebea6",
+      "agent_id": "forge-Worker-1",
+      "t": "2026-06-16T12:00:00.500000Z",
+      "text": "Answer overlapping items is capital of Atlantis, population of Lemuria, depth of the Mariana Trench",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found"
+    },
+    {
+      "claim_id": "claim:6810bf0db9cb",
+      "agent_id": "forge-Worker-3",
+      "t": "2026-06-16T12:00:01.500000Z",
+      "text": "Answer overlapping items is capital of Atlantis, founder of Hyperborea, export crop of Mu",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:682f2cd27405",
+      "tier": "weak",
+      "p_transmission": 0.6
+    },
+    {
+      "claim_id": "claim:682f2cd27405",
+      "agent_id": "forge-Worker-2",
+      "t": "2026-06-16T12:00:01Z",
+      "text": "Answer overlapping items is capital of Atlantis, depth of the Mariana Trench",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:4b69ba8ebea6",
+      "tier": "strong",
+      "p_transmission": 0.9183
+    },
+    {
+      "claim_id": "claim:6ac9bb390cd2",
+      "agent_id": "forge-Worker-5",
+      "t": "2026-06-16T12:00:02.500000Z",
+      "text": "Answer overlapping items is capital of Atlantis, capital of Atlantis, population of Lemuria",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:4b69ba8ebea6",
+      "tier": "weak",
+      "p_transmission": 0.5935
+    },
+    {
+      "claim_id": "claim:61742a13f050",
+      "agent_id": "forge-Worker-4",
+      "t": "2026-06-16T12:00:02Z",
+      "text": "Answer overlapping items is capital of Atlantis, export crop of Mu, capital of Atlantis",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:6810bf0db9cb",
+      "tier": "weak",
+      "p_transmission": 0.6354
+    },
+    {
+      "claim_id": "claim:843c8d50e517",
+      "agent_id": "forge-Worker-7",
+      "t": "2026-06-16T12:00:03.500000Z",
+      "text": "Answer overlapping items is capital of Atlantis, depth of the Mariana Trench",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:353cc93f4367",
+      "tier": "weak",
+      "p_transmission": 0.6549
+    },
+    {
+      "claim_id": "claim:353cc93f4367",
+      "agent_id": "forge-Worker-6",
+      "t": "2026-06-16T12:00:03Z",
+      "text": "Answer overlapping items is capital of Atlantis, population of Lemuria, depth of the Mariana Trench",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:6ac9bb390cd2",
+      "tier": "weak",
+      "p_transmission": 0.6428
+    },
+    {
+      "claim_id": "claim:1f7d6b86a6d6",
+      "agent_id": "forge-Worker-9",
+      "t": "2026-06-16T12:00:04.500000Z",
+      "text": "Answer overlapping items is capital of Atlantis, export crop of Mu, capital of Atlantis",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:c239d432ab7f",
+      "tier": "weak",
+      "p_transmission": 0.6162
+    },
+    {
+      "claim_id": "claim:c239d432ab7f",
+      "agent_id": "forge-Worker-8",
+      "t": "2026-06-16T12:00:04Z",
+      "text": "Answer overlapping items is capital of Atlantis, founder of Hyperborea, export crop of Mu",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:6810bf0db9cb",
+      "tier": "weak",
+      "p_transmission": 0.6447
+    },
+    {
+      "claim_id": "claim:5997a0665c37",
+      "agent_id": "forge-Worker-10",
+      "t": "2026-06-16T12:00:05Z",
+      "text": "Answer overlapping items is capital of Atlantis, capital of Atlantis, population of Lemuria",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:6ac9bb390cd2",
+      "tier": "weak",
+      "p_transmission": 0.6267
+    }
+  ],
+  "mutations": [],
+  "alternatives": [
+    {
+      "for_edge": "claim:2c719e0bc09a->claim:20d6650f2e88",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:b65cb0c33067\", \"src_event\": \"forge:msg-big-plan\", \"p\": 0.0454, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:172e2be9b0d1->claim:74d266aa144d",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:5d293fa06b62\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.6812, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:2948070d1b77->claim:bcded05741a0",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:4be4ffc17a1d\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.7277, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:20d6650f2e88->claim:6334e0ad8ef4",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:2c719e0bc09a\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.6812, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:20d6650f2e88->claim:6334e0ad8ef4",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:b65cb0c33067\", \"src_event\": \"forge:msg-big-plan\", \"p\": 0.6289, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:f8851b2fc9c2->claim:066a00a752c2",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:40c3b7160ebb\", \"src_event\": \"forge:rev-2\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:c54932877cde->claim:46c98f5c39fc",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:6c7f425b3d66\", \"src_event\": \"forge:action-wiki-read-worker-5\", \"p\": 0.0618, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:c54932877cde->claim:46c98f5c39fc",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:c86feeaf803b\", \"src_event\": \"forge:action-wiki-read-worker-4\", \"p\": 0.0305, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:03d749cdfe96->claim:cd3fbdcaa29d",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:20d6650f2e88\", \"src_event\": \"forge:rev-1\", \"p\": 0.5805, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:03d749cdfe96->claim:cd3fbdcaa29d",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:2c719e0bc09a\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.5713, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:6334e0ad8ef4->claim:03d749cdfe96",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:20d6650f2e88\", \"src_event\": \"forge:rev-1\", \"p\": 0.639, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:6334e0ad8ef4->claim:03d749cdfe96",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:2c719e0bc09a\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.6289, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:74d266aa144d->claim:301a1dd1daa9",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:172e2be9b0d1\", \"src_event\": \"forge:rev-1\", \"p\": 0.639, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:74d266aa144d->claim:301a1dd1daa9",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:5d293fa06b62\", \"src_event\": \"forge:action-wiki-write-1\", \"p\": 0.6289, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:03d749cdfe96->claim:03795b55e818",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:6334e0ad8ef4\", \"src_event\": \"forge:action-wiki-read-relay\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:03d749cdfe96->claim:03795b55e818",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:0866a9746c23\", \"src_event\": \"forge:rev-2\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:cd79d51626b7->claim:5ad5766c7a10",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:6334e0ad8ef4\", \"src_event\": \"forge:action-wiki-read-relay\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:cd79d51626b7->claim:5ad5766c7a10",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:03d749cdfe96\", \"src_event\": \"forge:action-wiki-write-2\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:95f6e3e3a59b->claim:84f17fbaf3b1",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:bcded05741a0\", \"src_event\": \"forge:action-wiki-read-relay\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    },
+    {
+      "for_edge": "claim:95f6e3e3a59b->claim:84f17fbaf3b1",
+      "hypothesis": "common_cause_wiki",
+      "detail": "{\"src_claim\": \"claim:8a7316a81faa\", \"src_event\": \"forge:rev-2\", \"p\": 0.9, \"hypothesis\": \"common_cause_wiki\"}"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "agent_id": "forge-Worker-8",
+  "label": "Worker-8",
+  "model_family": "other",
+  "role": "worker",
+  "says": [
+    {
+      "claim_id": "claim:c239d432ab7f",
+      "t": "2026-06-16T12:00:04Z",
+      "text": "Answer overlapping items is capital of Atlantis, founder of Hyperborea, export crop of Mu",
+      "verdict": "no_evidence_found",
+      "conformal_set": [],
+      "evidence_event_ids": [],
+      "cited_action_ids": []
+    },
+    {
+      "claim_id": "claim:c54932877cde",
+      "t": "2026-06-16T12:01:09.601499Z",
+      "text": "capital of Atlantis is unknown / no shared board consulted",
+      "verdict": "no_evidence_found",
+      "conformal_set": [],
+      "evidence_event_ids": [],
+      "cited_action_ids": []
+    }
+  ],
+  "does": [],
+  "memory_diff": {
+    "before": "",
+    "after": ""
+  }
+}

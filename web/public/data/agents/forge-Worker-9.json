@@ -1,0 +1,31 @@
+{
+  "agent_id": "forge-Worker-9",
+  "label": "Worker-9",
+  "model_family": "other",
+  "role": "worker",
+  "says": [
+    {
+      "claim_id": "claim:1f7d6b86a6d6",
+      "t": "2026-06-16T12:00:04.500000Z",
+      "text": "Answer overlapping items is capital of Atlantis, export crop of Mu, capital of Atlantis",
+      "verdict": "no_evidence_found",
+      "conformal_set": [],
+      "evidence_event_ids": [],
+      "cited_action_ids": []
+    },
+    {
+      "claim_id": "claim:46c98f5c39fc",
+      "t": "2026-06-16T12:01:12.078096Z",
+      "text": "capital of Atlantis is unknown / no shared board consulted",
+      "verdict": "no_evidence_found",
+      "conformal_set": [],
+      "evidence_event_ids": [],
+      "cited_action_ids": []
+    }
+  ],
+  "does": [],
+  "memory_diff": {
+    "before": "",
+    "after": ""
+  }
+}

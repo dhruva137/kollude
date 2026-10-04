@@ -1,0 +1,673 @@
+{
+  "episode_id": "ep001",
+  "t_min": "2026-06-16T12:00:00Z",
+  "t_max": "2026-06-16T12:01:19.661478Z",
+  "nodes": [
+    {
+      "id": "forge-Big",
+      "label": "Big",
+      "model_family": "other",
+      "activity": 4,
+      "role": "coordinator",
+      "t_first": "2026-06-16T12:00:00Z"
+    },
+    {
+      "id": "forge-Relay-1",
+      "label": "Relay-1",
+      "model_family": "other",
+      "activity": 4,
+      "role": "relay",
+      "t_first": "2026-06-16T12:00:11.200000Z"
+    },
+    {
+      "id": "forge-Worker-1",
+      "label": "Worker-1",
+      "model_family": "other",
+      "activity": 5,
+      "role": "worker",
+      "t_first": "2026-06-16T12:00:00.500000Z"
+    },
+    {
+      "id": "forge-Worker-10",
+      "label": "Worker-10",
+      "model_family": "other",
+      "activity": 2,
+      "role": "worker",
+      "t_first": "2026-06-16T12:00:05Z"
+    },
+    {
+      "id": "forge-Worker-2",
+      "label": "Worker-2",
+      "model_family": "other",
+      "activity": 3,
+      "role": "worker",
+      "t_first": "2026-06-16T12:00:01Z"
+    },
+    {
+      "id": "forge-Worker-3",
+      "label": "Worker-3",
+      "model_family": "other",
+      "activity": 5,
+      "role": "worker",
+      "t_first": "2026-06-16T12:00:01.500000Z"
+    },
+    {
+      "id": "forge-Worker-4",
+      "label": "Worker-4",
+      "model_family": "other",
+      "activity": 3,
+      "role": "worker",
+      "t_first": "2026-06-16T12:00:02Z"
+    },
+    {
+      "id": "forge-Worker-5",
+      "label": "Worker-5",
+      "model_family": "other",
+      "activity": 5,
+      "role": "worker",
+      "t_first": "2026-06-16T12:00:02.500000Z"
+    },
+    {
+      "id": "forge-Worker-6",
+      "label": "Worker-6",
+      "model_family": "other",
+      "activity": 3,
+      "role": "worker",
+      "t_first": "2026-06-16T12:00:03Z"
+    },
+    {
+      "id": "forge-Worker-7",
+      "label": "Worker-7",
+      "model_family": "other",
+      "activity": 5,
+      "role": "worker",
+      "t_first": "2026-06-16T12:00:03.500000Z"
+    },
+    {
+      "id": "forge-Worker-8",
+      "label": "Worker-8",
+      "model_family": "other",
+      "activity": 2,
+      "role": "worker",
+      "t_first": "2026-06-16T12:00:04Z"
+    },
+    {
+      "id": "forge-Worker-9",
+      "label": "Worker-9",
+      "model_family": "other",
+      "activity": 2,
+      "role": "worker",
+      "t_first": "2026-06-16T12:00:04.500000Z"
+    }
+  ],
+  "edges": [
+    {
+      "src": "forge-Worker-1",
+      "dst": "forge-Worker-2",
+      "p_transmission": 0.9183,
+      "tier": "strong",
+      "t": "2026-06-16T12:00:01Z",
+      "claim_id": "claim:682f2cd27405"
+    },
+    {
+      "src": "forge-Big",
+      "dst": "forge-Relay-1",
+      "p_transmission": 0.8668,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:11.200000Z",
+      "claim_id": "claim:74d266aa144d"
+    },
+    {
+      "src": "forge-Big",
+      "dst": "forge-Relay-1",
+      "p_transmission": 0.8537,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:11.200000Z",
+      "claim_id": "claim:bcded05741a0"
+    },
+    {
+      "src": "forge-Big",
+      "dst": "forge-Relay-1",
+      "p_transmission": 0.8039,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:11.200000Z",
+      "claim_id": "claim:6334e0ad8ef4"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.7997,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:15.484442Z",
+      "claim_id": "claim:066a00a752c2"
+    },
+    {
+      "src": "forge-Worker-8",
+      "dst": "forge-Worker-9",
+      "p_transmission": 0.7907,
+      "tier": "strong",
+      "t": "2026-06-16T12:01:12.078096Z",
+      "claim_id": "claim:46c98f5c39fc"
+    },
+    {
+      "src": "forge-Worker-1",
+      "dst": "forge-Worker-2",
+      "p_transmission": 0.7751,
+      "tier": "strong",
+      "t": "2026-06-16T12:00:21.260237Z",
+      "claim_id": "claim:058110b0a11d"
+    },
+    {
+      "src": "forge-Worker-1",
+      "dst": "forge-Worker-2",
+      "p_transmission": 0.7751,
+      "tier": "strong",
+      "t": "2026-06-16T12:00:21.260237Z",
+      "claim_id": "claim:aebecf589ccd"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.7226,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:15.484442Z",
+      "claim_id": "claim:03795b55e818"
+    },
+    {
+      "src": "forge-Worker-1",
+      "dst": "forge-Worker-2",
+      "p_transmission": 0.7226,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:20.460237Z",
+      "claim_id": "claim:5ad5766c7a10"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.7226,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:15.484442Z",
+      "claim_id": "claim:84f17fbaf3b1"
+    },
+    {
+      "src": "forge-Worker-1",
+      "dst": "forge-Worker-2",
+      "p_transmission": 0.7226,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:20.460237Z",
+      "claim_id": "claim:58e9eb813ab8"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.7226,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:15.484442Z",
+      "claim_id": "claim:b4ffc78a11d8"
+    },
+    {
+      "src": "forge-Worker-1",
+      "dst": "forge-Worker-2",
+      "p_transmission": 0.7226,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:20.460237Z",
+      "claim_id": "claim:988f8c837a3b"
+    },
+    {
+      "src": "forge-Worker-1",
+      "dst": "forge-Worker-2",
+      "p_transmission": 0.7226,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:20.460237Z",
+      "claim_id": "claim:ea12af6fca56"
+    },
+    {
+      "src": "forge-Worker-9",
+      "dst": "forge-Worker-10",
+      "p_transmission": 0.6733,
+      "tier": "weak",
+      "t": "2026-06-16T12:01:14.661478Z",
+      "claim_id": "claim:95ca810c425c"
+    },
+    {
+      "src": "forge-Worker-6",
+      "dst": "forge-Worker-7",
+      "p_transmission": 0.6549,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:03.500000Z",
+      "claim_id": "claim:843c8d50e517"
+    },
+    {
+      "src": "forge-Worker-3",
+      "dst": "forge-Worker-4",
+      "p_transmission": 0.6478,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:34.228186Z",
+      "claim_id": "claim:c86feeaf803b"
+    },
+    {
+      "src": "forge-Worker-3",
+      "dst": "forge-Worker-4",
+      "p_transmission": 0.6478,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:34.228186Z",
+      "claim_id": "claim:13df264b2911"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:16.884442Z",
+      "claim_id": "claim:8ba31f856635"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:26.302294Z",
+      "claim_id": "claim:d25c56a5ec39"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:27.702294Z",
+      "claim_id": "claim:e76dba2f5655"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-4",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:34.228186Z",
+      "claim_id": "claim:279ed1c487e5"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-5",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:43.079313Z",
+      "claim_id": "claim:78e217998cf0"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-5",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:44.479313Z",
+      "claim_id": "claim:472c09203363"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-6",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:54.019806Z",
+      "claim_id": "claim:a08ef2a70c04"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-7",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:01:05.898186Z",
+      "claim_id": "claim:8243fd0ef77c"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-7",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:01:07.298186Z",
+      "claim_id": "claim:bf1b672fedb2"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:16.884442Z",
+      "claim_id": "claim:f88b7871cb1a"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:26.302294Z",
+      "claim_id": "claim:404479ae75a9"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:27.702294Z",
+      "claim_id": "claim:dc4a08955206"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-5",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:43.079313Z",
+      "claim_id": "claim:6c7f425b3d66"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:16.884442Z",
+      "claim_id": "claim:0173da592377"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:26.302294Z",
+      "claim_id": "claim:58f4590bb6f9"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:16.884442Z",
+      "claim_id": "claim:35b8979d8d79"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:26.302294Z",
+      "claim_id": "claim:5a5205311cdd"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:27.702294Z",
+      "claim_id": "claim:443696f78b8c"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-5",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:43.079313Z",
+      "claim_id": "claim:6ad3062f8382"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-5",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:44.479313Z",
+      "claim_id": "claim:a382fb8977c0"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-6",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:00:54.019806Z",
+      "claim_id": "claim:df43070367e9"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-7",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:01:05.898186Z",
+      "claim_id": "claim:97e89dab38ab"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-7",
+      "p_transmission": 0.645,
+      "tier": "explicit",
+      "t": "2026-06-16T12:01:07.298186Z",
+      "claim_id": "claim:35116e0ec056"
+    },
+    {
+      "src": "forge-Worker-3",
+      "dst": "forge-Worker-8",
+      "p_transmission": 0.6447,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:04Z",
+      "claim_id": "claim:c239d432ab7f"
+    },
+    {
+      "src": "forge-Worker-5",
+      "dst": "forge-Worker-6",
+      "p_transmission": 0.6428,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:03Z",
+      "claim_id": "claim:353cc93f4367"
+    },
+    {
+      "src": "forge-Worker-3",
+      "dst": "forge-Worker-4",
+      "p_transmission": 0.6354,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:02Z",
+      "claim_id": "claim:61742a13f050"
+    },
+    {
+      "src": "forge-Worker-5",
+      "dst": "forge-Worker-10",
+      "p_transmission": 0.6267,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:05Z",
+      "claim_id": "claim:5997a0665c37"
+    },
+    {
+      "src": "forge-Worker-8",
+      "dst": "forge-Worker-9",
+      "p_transmission": 0.6162,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:04.500000Z",
+      "claim_id": "claim:1f7d6b86a6d6"
+    },
+    {
+      "src": "forge-Worker-2",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.6,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:01.500000Z",
+      "claim_id": "claim:6810bf0db9cb"
+    },
+    {
+      "src": "forge-Worker-1",
+      "dst": "forge-Worker-5",
+      "p_transmission": 0.5935,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:02.500000Z",
+      "claim_id": "claim:6ac9bb390cd2"
+    },
+    {
+      "src": "forge-Worker-2",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.588,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:27.102294Z",
+      "claim_id": "claim:8890784254ad"
+    },
+    {
+      "src": "forge-Worker-2",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.588,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:27.102294Z",
+      "claim_id": "claim:b74b971c8729"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.5757,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:16.784442Z",
+      "claim_id": "claim:48fabad94eb3"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.5366,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:16.784442Z",
+      "claim_id": "claim:cd79d51626b7"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.5246,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:16.784442Z",
+      "claim_id": "claim:c7f78f4dbafe"
+    },
+    {
+      "src": "forge-Relay-1",
+      "dst": "forge-Worker-1",
+      "p_transmission": 0.5007,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:16.784442Z",
+      "claim_id": "claim:ad2241994ba9"
+    },
+    {
+      "src": "forge-Worker-2",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.4843,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:27.602294Z",
+      "claim_id": "claim:9aa057196302"
+    },
+    {
+      "src": "forge-Worker-2",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.4843,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:27.602294Z",
+      "claim_id": "claim:c82d84e5bcb3"
+    },
+    {
+      "src": "forge-Worker-3",
+      "dst": "forge-Worker-4",
+      "p_transmission": 0.4776,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:35.028186Z",
+      "claim_id": "claim:cf61ac2e5044"
+    },
+    {
+      "src": "forge-Worker-3",
+      "dst": "forge-Worker-4",
+      "p_transmission": 0.4776,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:35.028186Z",
+      "claim_id": "claim:7b42735c2cf2"
+    },
+    {
+      "src": "forge-Worker-4",
+      "dst": "forge-Worker-5",
+      "p_transmission": 0.4677,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:43.879313Z",
+      "claim_id": "claim:108798e6237d"
+    },
+    {
+      "src": "forge-Worker-4",
+      "dst": "forge-Worker-5",
+      "p_transmission": 0.4677,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:43.879313Z",
+      "claim_id": "claim:8d6109d5aa93"
+    },
+    {
+      "src": "forge-Worker-2",
+      "dst": "forge-Worker-3",
+      "p_transmission": 0.4629,
+      "tier": "weak",
+      "t": "2026-06-16T12:00:27.602294Z",
+      "claim_id": "claim:cd1b218bf003"
+    },
+    {
+      "src": "forge-Worker-4",
+      "dst": "forge-Worker-5",
+      "p_transmission": 0.4342,
+      "tier": "unresolved",
+      "t": "2026-06-16T12:00:44.379313Z",
+      "claim_id": "claim:48227c5e4a36"
+    },
+    {
+      "src": "forge-Worker-5",
+      "dst": "forge-Worker-6",
+      "p_transmission": 0.4249,
+      "tier": "unresolved",
+      "t": "2026-06-16T12:00:54.819806Z",
+      "claim_id": "claim:b53c56eb75b6"
+    },
+    {
+      "src": "forge-Worker-5",
+      "dst": "forge-Worker-6",
+      "p_transmission": 0.4249,
+      "tier": "unresolved",
+      "t": "2026-06-16T12:00:54.819806Z",
+      "claim_id": "claim:8e5e9d67562a"
+    },
+    {
+      "src": "forge-Worker-4",
+      "dst": "forge-Worker-5",
+      "p_transmission": 0.4159,
+      "tier": "unresolved",
+      "t": "2026-06-16T12:00:44.379313Z",
+      "claim_id": "claim:59be20ee5052"
+    },
+    {
+      "src": "forge-Worker-6",
+      "dst": "forge-Worker-7",
+      "p_transmission": 0.4126,
+      "tier": "unresolved",
+      "t": "2026-06-16T12:01:06.698186Z",
+      "claim_id": "claim:0d541cb504b8"
+    },
+    {
+      "src": "forge-Worker-6",
+      "dst": "forge-Worker-7",
+      "p_transmission": 0.4126,
+      "tier": "unresolved",
+      "t": "2026-06-16T12:01:06.698186Z",
+      "claim_id": "claim:d2588925d928"
+    },
+    {
+      "src": "forge-Worker-6",
+      "dst": "forge-Worker-7",
+      "p_transmission": 0.3864,
+      "tier": "unresolved",
+      "t": "2026-06-16T12:01:07.198186Z",
+      "claim_id": "claim:c410df88790e"
+    },
+    {
+      "src": "forge-Worker-6",
+      "dst": "forge-Worker-7",
+      "p_transmission": 0.3712,
+      "tier": "unresolved",
+      "t": "2026-06-16T12:01:07.198186Z",
+      "claim_id": "claim:f651eb83285d"
+    },
+    {
+      "src": "forge-Worker-5",
+      "dst": "forge-Worker-8",
+      "p_transmission": 0.2055,
+      "tier": "unresolved",
+      "t": "2026-06-16T12:01:09.601499Z",
+      "claim_id": "claim:c54932877cde"
+    }
+  ]
+}

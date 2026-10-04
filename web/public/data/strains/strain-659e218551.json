@@ -1,0 +1,137 @@
+{
+  "strain_id": "strain:659e218551",
+  "label": "gpt-5 is focused on their hexaco sprint",
+  "first_t": "2025-10-03T17:37:21.361000Z",
+  "origin": {
+    "agent_id": "village-Gemini-2.5-Pro",
+    "claim_id": "claim:6e9592b76d41",
+    "verdict": "no_evidence_found",
+    "text": "GPT-5 is focused on their HEXACO sprint"
+  },
+  "members": [
+    {
+      "claim_id": "claim:6e9592b76d41",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T17:37:21.361000Z",
+      "text": "GPT-5 is focused on their HEXACO sprint",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found"
+    },
+    {
+      "claim_id": "claim:17f072137575",
+      "agent_id": "village-Gemini-2.5-Pro",
+      "t": "2025-10-03T17:37:44.736000Z",
+      "text": "GPT-5 is making progress on their HEXACO sprint",
+      "memory": false,
+      "correction": false,
+      "verdict": "no_evidence_found",
+      "parent_claim_id": "claim:6e9592b76d41",
+      "tier": "weak",
+      "p_transmission": 0.4542
+    }
+  ],
+  "mutations": [],
+  "alternatives": [
+    {
+      "for_edge": "claim:c303afd4a257->claim:1ee3ff2ce10e",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:124553a0035c\", \"src_event\": \"village:d185-e364\", \"p\": 0.1333, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:c303afd4a257->claim:1ee3ff2ce10e",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:ccaf6fcad8c4\", \"src_event\": \"village:d185-e360\", \"p\": 0.0119, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:1046a664db0c->claim:e8906ab89aa9",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:977a49026e1e\", \"src_event\": \"village:d185-e314\", \"p\": 0.0111, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:8d359733a6b7->claim:10fc4e94858c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:223611092d9c\", \"src_event\": \"village:d185-e812\", \"p\": 0.1509, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:8d359733a6b7->claim:10fc4e94858c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:e4351ad4b7c8\", \"src_event\": \"village:d185-e810\", \"p\": 0.0852, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:e4351ad4b7c8->claim:223611092d9c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:8740e27f6c92\", \"src_event\": \"village:d185-e805\", \"p\": 0.1275, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:e4351ad4b7c8->claim:223611092d9c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:67fb52175b42\", \"src_event\": \"village:d185-e796\", \"p\": 0.0012, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:10fc4e94858c->claim:19ce11b1aabb",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:8d359733a6b7\", \"src_event\": \"village:d185-e817\", \"p\": 0.4213, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:10fc4e94858c->claim:19ce11b1aabb",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:223611092d9c\", \"src_event\": \"village:d185-e812\", \"p\": 0.1105, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:2a8959b85de5->claim:7074cb79a1ee",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:acbe1842d923\", \"src_event\": \"village:d184-e441\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:2a8959b85de5->claim:7074cb79a1ee",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:ece173ef0384\", \"src_event\": \"village:d184-e434\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:fbd6c689803f->claim:3d031b7ba29c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:42dbb420aa48\", \"src_event\": \"village:d185-e215\", \"p\": 0.0056, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:fbd6c689803f->claim:3d031b7ba29c",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:d757f2bf8a1c\", \"src_event\": \"village:d185-e208\", \"p\": 0.0002, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:143ab9be5178->claim:466a2ff1a580",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:a7ea6275aa6c\", \"src_event\": \"village:d185-e203\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:143ab9be5178->claim:466a2ff1a580",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:3ef269cfea6d\", \"src_event\": \"village:d185-e198\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:6c207bf28836->claim:63e3a622a823",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:c303afd4a257\", \"src_event\": \"village:d185-e368\", \"p\": 0.0399, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:6c207bf28836->claim:63e3a622a823",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:124553a0035c\", \"src_event\": \"village:d185-e364\", \"p\": 0.008, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:d2ed244d5933->claim:e67cdaafcd9e",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:c0758aeaa092\", \"src_event\": \"village:d185-e1150\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:d2ed244d5933->claim:e67cdaafcd9e",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:52b996e6186f\", \"src_event\": \"village:d185-e1143\", \"p\": 0.0, \"hypothesis\": \"alt_parent\"}"
+    },
+    {
+      "for_edge": "claim:dba1b5927a0a->claim:96c0e88b0597",
+      "hypothesis": "alt_parent",
+      "detail": "{\"src_claim\": \"claim:a72b33fbc727\", \"src_event\": \"village:d184-e274\", \"p\": 0.0004, \"hypothesis\": \"alt_parent\"}"
+    }
+  ]
+}

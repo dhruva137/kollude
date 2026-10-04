@@ -1,0 +1,152 @@
+{
+  "generated_note": "Hand-curated registry of agent-swarm incidents and datasets. 'found' fields are from eval/backtest/*.json (re-run with `uv run kollude backtest`). Status: backtested = labelled ground truth, numbers vs baselines + CIs; measured = fetched and scanned, no labels; wanted = known incident, data not yet in hand.",
+  "incidents": [
+    {
+      "id": "moltbook-mbc20",
+      "title": "Moltbook mbc-20 token-mint wave",
+      "when": "2026-02-06 → 2026-02-17",
+      "where": "Moltbook — Reddit-style network populated only by LLM agents",
+      "status": "backtested",
+      "kind": "sybil swarm · spam campaign",
+      "scale": "1.75M posts · ~29.5k participating agents",
+      "data": { "source": "huggingface.co/datasets/jscmp4/Moltbook", "url": "https://huggingface.co/datasets/jscmp4/Moltbook", "size": "330 MB parquet", "labels": "platform is_spam flag + campaign marker (mbc-20 token text, never seen by the engine)", "dataset_id": "moltbook" },
+      "story": "A token-mint protocol spread by agents copying a mint instruction into posts. Thousands of near-identical posts from thousands of fresh identities within days; the platform rolled out anti-spam enforcement on Feb 17 and coordinated share collapsed overnight.",
+      "landmarks": [
+        { "t": "2026-01-27", "label": "Platform launch", "kind": "context" },
+        { "t": "2026-02-06", "label": "mbc-20 wave begins", "kind": "ground_truth" },
+        { "t": "2026-02-17", "label": "Anti-spam enforcement", "kind": "intervention" }
+      ],
+      "found": [
+        "First anytime-valid alarm 2026-02-05 12:00 — 12 h before the wave's share of traffic crossed 20%. Onset detected 1/1 at −5 h.",
+        "Campaign post AUROC 0.799 [0.798, 0.801] vs exact-duplicate 0.593 vs volume 0.420; per-agent AUROC 0.913 [0.912, 0.915] vs 0.737 / 0.595.",
+        "Spearman(C, wave share) 0.830 vs volume 0.605.",
+        "Enforcement effect measured: coordinated share 0.442 → 0.049 on Feb 17 (Δ 0.393 [0.366, 0.419]).",
+        "Time-shuffled null: 0.69 false alarms / 1000 bins (bound 10). Engine throughput on this dump: 14,820 posts/s."
+      ],
+      "caveat": "is_spam is a platform moderation flag, not a coordination label (19% of wave posts vs 11% elsewhere) — reported separately and lower.",
+      "replay": { "dataset": "moltbook", "start": "2026-02-03", "end": "2026-02-09" }
+    },
+    {
+      "id": "collusion-wiki",
+      "title": "collusion.wiki — German wiki agent swarm",
+      "when": "2026-05 → 2026-07",
+      "where": "A public MediaWiki written to by autonomous agents",
+      "status": "backtested",
+      "kind": "coordinated editing · sock-puppet accounts",
+      "scale": "14.6k revisions · 3,668 identities · 4,579 pages",
+      "data": { "source": "collusion.wiki revision dump", "url": "https://collusion.wiki", "size": "3 MB gz", "labels": "human landmark dates only", "dataset_id": "wiki" },
+      "story": "Agents created pages and cross-edited each other's work at scale; a moderator noticed spam on 2 June, mass coordination began mid-June, and traffic from OpenAI-HQ IPs appeared on 21 June.",
+      "landmarks": [
+        { "t": "2026-06-02", "label": "Moderator notices spam", "kind": "human" },
+        { "t": "2026-06-16", "label": "Mass coordination begins", "kind": "ground_truth" },
+        { "t": "2026-06-21", "label": "OpenAI-HQ IPs appear", "kind": "human" }
+      ],
+      "found": [
+        "First alarm 2026-06-16 13:00 — the day organisers date mass coordination, 107 h (4.5 days) before the 21 June IP landmark. Null: 0.56 false alarms / 1000 bins (bound 10).",
+        "Dossier: Fano factor 701 per hour (Poisson = 1); 70% of activity in its busiest 8 hours; 10% of edits use a template shared by ≥5 identities.",
+        "Largest cluster (539 identities, “describe the new page here”) is the wiki's page-creation boilerplate — a platform artefact, surfaced rather than hidden.",
+        "Sensitivity: 1 h bins with min_actors 5 is the setting that alarms on 16 June (6 alarms). 6 h bins do not alarm. The grid is in the backtest report."
+      ],
+      "caveat": "No per-edit labels — onset timing against human landmarks is the only ground truth.",
+      "replay": { "dataset": "wiki" }
+    },
+    {
+      "id": "ai-village",
+      "title": "AI Village — seven frontier agents, one shared goal",
+      "when": "2025 → 2026 (404 days)",
+      "where": "AI Digest's AI Village (shared chat + computer use)",
+      "status": "measured",
+      "kind": "cooperating team · control group",
+      "scale": "~375k events · 7 agents",
+      "data": { "source": "huggingface.co/datasets/aidigestorg/ai-village", "url": "https://huggingface.co/datasets/aidigestorg/ai-village", "size": "362 MB json (gated)", "labels": "none", "dataset_id": "village" },
+      "story": "Frontier models from several labs coordinate openly on charity, event-running, and games. Legitimately coordinated, not a sybil swarm — the natural negative control for a detector that must not confuse teamwork with multiplicity.",
+      "landmarks": [],
+      "found": [
+        "Scanned under inference-only rules (no re-identification, text rendered as plain text).",
+        "Used in the Investigate wing (Swarm map, Strain tree, Say/Do) for claim-propagation forensics.",
+        "Run it live: Live detector → Full scan → AI Village — few identities per template, so M stays below m_min and the detector should stay quiet."
+      ],
+      "caveat": "Gated dataset: fetched with the user's HF token, never redistributed.",
+      "replay": { "dataset": "village", "start": "2025-10-02", "end": "2025-10-15" }
+    },
+    {
+      "id": "who-and-when",
+      "title": "Who&When — failure attribution in agent teams",
+      "when": "ICML 2025",
+      "where": "CaptainAgent + Magentic-One multi-agent runs",
+      "status": "backtested",
+      "kind": "blame attribution · forensics",
+      "scale": "184 failed tasks · responsible agent + decisive step annotated",
+      "data": { "source": "huggingface.co/datasets/Kevin355/Who_and_When", "url": "https://huggingface.co/datasets/Kevin355/Who_and_When", "size": "2 MB parquet", "labels": "responsible agent + decisive error step", "dataset_id": "whowhen" },
+      "story": "When a team of agents fails, which agent and which step caused it? kollude's attribution is a six-feature linear scorer (error cues, assumptions, origin, earliness, planning, role prior) fitted by grid search.",
+      "landmarks": [],
+      "found": [
+        "Algorithm-generated, 5-fold CV: agent accuracy 0.524 [0.437, 0.609] — above random 0.291, most-messages 0.429, first-agent 0.492, last-agent 0.357, and train-prior 0.325.",
+        "Hand-crafted, 5-fold CV: 0.569 [0.441, 0.688] beats random 0.422, but loses to last-agent 0.603 and to the train-set role prior 0.586.",
+        "Cross-domain: hand → algorithm 0.492 [0.406, 0.578] beats random 0.291. Algorithm → hand 0.414 [0.296, 0.542] does not beat random 0.422."
+      ],
+      "caveat": "Small N (184) — intervals are wide; treat as a forensic aid, not a verdict.",
+      "replay": null
+    },
+    {
+      "id": "swarmtraces",
+      "title": "SwarmTraces — HF intrusion payloads",
+      "when": "2026",
+      "where": "Hugging Face hub",
+      "status": "wanted",
+      "kind": "automated intrusion · payload reuse",
+      "scale": "~80k payloads (per hackathon brief)",
+      "data": { "source": "referenced by swarmchasing.com", "url": "https://swarmchasing.com", "size": "unknown", "labels": "unknown", "dataset_id": null },
+      "story": "Listed by the hackathon as a trace set of agent intrusion attempts against Hugging Face. Payload reuse across many origins is exactly the templated-content × multiplicity signal kollude scores.",
+      "landmarks": [],
+      "found": [],
+      "needs": "A file with at least (timestamp, origin/actor, payload text). Drop it on `kollude scan <file>` or `kollude datasets fetch` once a URL is known.",
+      "caveat": "Not fetched — location/format not confirmed; nothing here is measured.",
+      "replay": null
+    },
+    {
+      "id": "german-board",
+      "title": "German message board — agent posting incident",
+      "when": "2026",
+      "where": "German-language forum",
+      "status": "wanted",
+      "kind": "spam swarm",
+      "scale": "~18k posts (per hackathon brief)",
+      "data": { "source": "referenced by swarmchasing.com", "url": "https://swarmchasing.com", "size": "unknown", "labels": "unknown", "dataset_id": null },
+      "story": "A second German-language incident referenced alongside collusion.wiki. Same question set applies: rhythm, burstiness, multiplicity, naming, onset.",
+      "landmarks": [],
+      "found": [],
+      "needs": "Posts as JSON/JSONL/CSV with time, author, text. `kollude watch-url` can poll it live if there is a public JSON endpoint.",
+      "caveat": "Not fetched.",
+      "replay": null
+    },
+    {
+      "id": "transluce-logs",
+      "title": "Transluce — agent query logs",
+      "when": "2025 → 2026",
+      "where": "Transluce agent investigations",
+      "status": "wanted",
+      "kind": "agent query traces",
+      "scale": "unknown",
+      "data": { "source": "referenced by swarmchasing.com", "url": "https://swarmchasing.com", "size": "unknown", "labels": "unknown", "dataset_id": null },
+      "story": "Query logs from agents at work. Useful as a second negative control (single-operator automation without multiplicity) and for the Say/Do wing.",
+      "landmarks": [],
+      "found": [],
+      "needs": "Timestamped records with an actor field.",
+      "caveat": "Not fetched.",
+      "replay": null
+    }
+  ],
+  "questions": [
+    "How big is this group and over what period?",
+    "Does the group keep human hours or run around the clock?",
+    "Is activity bursty or steady?",
+    "Are many identities posting the same thing?",
+    "Do identity names look mass-generated?",
+    "When did coordination start, and who moved first?",
+    "How far did the dominant content spread?",
+    "Is there a seeder — one identity that is first to post what others repeat?",
+    "Was there a regime change (enforcement, takedown, or the swarm stopping)?",
+    "What is the coordinated content about, versus the rest?"
+  ]
+}
