@@ -27,8 +27,10 @@ Every headline has a **named baseline** and an **interval**. Alerts require **$M
 | **collusion.wiki** (German board revisions) | First alarm **2026-06-16 13:00**, **107h** before the 21 June IP landmark | Lead time vs a fixed public landmark, not AUROC on hidden labels |
 | **Who&When** hand-crafted | Agent accuracy **0.569** [0.441, 0.688] | Loses to **last-agent 0.603** — reported miss |
 | **Synthetic** (known onset) | Caught **2 bins** after onset; post AUROC **1.000** vs volume **0.064** | One organic catchphrase can alarm **before** injected onset |
+| **SwarmTraces** (redacted payloads) | Folded templates shared across capture ids: **3,893** templates on ≥2 captures (**86.2%** of foldable payloads); exact-hash share is only **1,899** templates / **7,553** payloads | No usable clock (`time_utc` null on every row) → **no e-CUSUM**. Actor field is a redacted capture id, not an agent name. Baseline: exact-text collision |
+| **Transluce** urlquery (public metadata) | With the actor axis missing, **alarms = 0** (gate shut). Class-share e-CUSUM with the gate forced open would cross **3** times (counterfactual only) | Clock present (149 days). **No actor** in the public release → multiplicity cannot be measured. Volume vs custom-program share Spearman **0.73** |
 
-Intervals for AUROC are bootstrap percentiles as implemented in `kollude/backtest.py`. Who&When intervals are Wilson score intervals on accuracy.
+Intervals for AUROC are bootstrap percentiles as implemented in `kollude/backtest.py`. Who&When intervals are Wilson score intervals on accuracy. SwarmTraces / Transluce stats were computed offline on the public dumps (payload text never printed).
 
 Online alarm baselines in the backtest harness (volume $z$-score, exact-dup-share $z$-score) are used for comparison in generated reports; the README table highlights the ranking and lead-time results above.
 
@@ -60,8 +62,9 @@ Non-promotion rule: never fuse automation + coordination + impact into one scala
 
 ## 5. What we do **not** claim
 
-- **No Transluce / SwarmTraces scoring.** Those corpora are not part of the measured table in this README.
-- **No steganography, hidden channels, or covert-channel detection.** Spread traces a shared folded line in the clear.
+- **No SwarmTraces time-series alarm.** Without timestamps there is no bin clock; we report cross-capture template multiplicity only.
+- **No Transluce swarm alarm.** Without actors, $M$ stays closed; class-share crossings with a forced-open gate are a counterfactual, not a claimed detection.
+- **No steganography, hidden channels, or covert-channel detection.** Spread traces a shared folded line in the clear. Do not execute SwarmTraces payload text.
 - **No mechanistic interpretability** of model internals; no activation probes; no white-box neuron claims in this public package’s measured results.
 - **No Sentence-BERT / embedding similarity** as the coordination engine. Templates are folded token strings, not cosine neighbors in embedding space.
 - **No claim that AUROC on one campaign generalizes** to all agent social networks or all languages without re-measurement.
