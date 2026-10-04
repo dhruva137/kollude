@@ -277,7 +277,32 @@ export function LiveView() {
   const nAlarms = ticks.filter((t) => t.alarm).length
   const landmarks = stream.landmarks.length ? stream.landmarks : result?.landmarks ?? []
   const live = runId && !stream.done && !stream.error
-  const available = datasets.filter((d) => d.available && d.id !== 'whowhen')
+  const scannable = datasets.filter((d) => d.id !== 'whowhen')
+  const selectedInfo = datasets.find((d) => d.id === ds)
+  const needsFetch = Boolean(selectedInfo && !selectedInfo.available && ds !== 'synthetic' && ds !== 'forge')
+
+  const fetchSelected = async () => {
+    setErr(null)
+    setBusy(true)
+    try {
+      await api(`/api/datasets/${ds}/fetch`, { method: 'POST', json: {} })
+      for (let i = 0; i < 180; i++) {
+        await new Promise((r) => setTimeout(r, 1000))
+        const list = await api<DatasetInfo[]>('/api/datasets')
+        setDatasets(list)
+        const row = list.find((d) => d.id === ds)
+        if (row?.available) {
+          setBusy(false)
+          return
+        }
+        if (row?.fetch?.status === 'error') throw new Error(row.fetch.error ?? `download failed for ${ds}`)
+      }
+      throw new Error('download still running — check the terminal')
+    } catch (e) {
+      setErr(String((e as Error).message ?? e))
+      setBusy(false)
+    }
+  }
 
   if (!health.online) {
     return (
@@ -331,14 +356,33 @@ export function LiveView() {
               <label className="block">
                 <span className="text-muted">Dataset</span>
                 <select value={ds} onChange={(e) => setDs(e.target.value)} className="mt-1 w-full rounded-md border border-line bg-panel-2 px-2 py-1.5">
-                  {available.map((d) => (
+                  {(scannable.length ? scannable : [{ id: 'synthetic', title: 'Synthetic swarm (known onset)', available: true } as DatasetInfo]).map((d) => (
                     <option key={d.id} value={d.id}>
+                      {d.available || d.id === 'synthetic' || d.id === 'forge' ? '● ' : '○ '}
                       {d.title}
+                      {d.requires_token && !d.available ? ' · needs HF_TOKEN' : !d.available && d.id !== 'synthetic' && d.id !== 'forge' ? ' · download' : ''}
                     </option>
                   ))}
-                  {!available.some((d) => d.id === 'synthetic') && <option value="synthetic">Synthetic swarm (known onset)</option>}
                 </select>
               </label>
+              {needsFetch && (
+                <div className="rounded-lg border border-dashed border-line-2 bg-panel-2/60 px-2.5 py-2 text-[11.5px] text-muted">
+                  <div className="text-fg-2">Not on disk yet ({selectedInfo?.size_hint || 'download required'}).</div>
+                  <div className="mt-1 text-faint">
+                    {selectedInfo?.requires_token
+                      ? 'Village is gated. Put HF_TOKEN in .env, restart kollude serve, then download.'
+                      : 'One click downloads into data/ next to the checkout (gitignored).'}
+                  </div>
+                  <button
+                    type="button"
+                    disabled={busy}
+                    onClick={() => void fetchSelected()}
+                    className="mt-2 inline-flex items-center gap-1.5 rounded-md border border-line bg-panel px-2.5 py-1.5 text-[12px] text-fg hover:border-accent disabled:opacity-50"
+                  >
+                    <Database size={12} /> {busy ? 'Downloading…' : `Download ${ds}`}
+                  </button>
+                </div>
+              )}
               {ds !== 'synthetic' ? (
                 <>
                   <div className="grid grid-cols-2 gap-2">
@@ -444,7 +488,7 @@ httpx.post("http://127.0.0.1:8787/api/live/${monName}/ingest",
           <div className="mt-4 flex gap-2">
             <button
               type="button"
-              disabled={busy || (mode !== 'agents' && !available.length && ds !== 'synthetic')}
+              disabled={busy || (mode !== 'agents' && needsFetch)}
               onClick={launch}
               className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-accent-2 px-3 py-2 text-[13px] font-medium text-white transition hover:bg-accent disabled:opacity-50"
             >

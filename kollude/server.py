@@ -103,7 +103,12 @@ def create_run(body: dict[str, Any] = Body(...)) -> dict[str, Any]:
     if ds == "whowhen":
         raise HTTPException(422, "Who&When is a blame set. Use GET /api/cases, not a swarm scan.")
     if ds and not datasets.REGISTRY[ds].available():
-        raise HTTPException(409, f"dataset {ds} not downloaded — POST /api/datasets/{ds}/fetch")
+        info = datasets.REGISTRY[ds]
+        tip = "needs HF_TOKEN in .env" if info.requires_token else f"download with: kollude datasets fetch {ds}"
+        raise HTTPException(
+            409,
+            f"{info.title} is not on disk yet ({tip}). Synthetic and forge work with no download.",
+        )
     if not (ds or body.get("path") or body.get("events") is not None):
         raise HTTPException(422, "need one of dataset / path / events")
     run = STORE.start(

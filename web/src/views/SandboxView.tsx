@@ -1,8 +1,8 @@
-import { Pause, Play, Radio, RotateCcw, Zap } from 'lucide-react'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { Download, Pause, Play, Radio, RotateCcw, Zap } from 'lucide-react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { EmptyNote, Panel, PanelHeader, StatTile, cx } from '../components/ui'
-import { api, useApiHealth, type RunResult, type SpreadRow, type Tick } from '../lib/api'
+import { api, useApiHealth, type DatasetInfo, type RunResult, type SpreadRow, type Tick } from '../lib/api'
 
 type TapeEvent = {
   t: string
@@ -33,19 +33,16 @@ type ReplayTape = {
   source: string
 }
 
-/** Laptop-safe sources. Real corpora only through windows / max_rows. */
-const SOURCES: Array<{
-  id: string
-  label: string
-  note: string
-  body?: Record<string, unknown>
-}> = [
-  { id: 'synthetic', label: 'synthetic', note: 'known onset · no download' },
-  { id: 'forge', label: 'forge', note: 'bundled episode' },
-  { id: 'moltbook', label: 'moltbook week', note: '2026-02-03…09 only', body: { start: '2026-02-03', end: '2026-02-09' } },
-  { id: 'wiki', label: 'wiki', note: 'collusion.wiki · if fetched' },
-  { id: 'village', label: 'village', note: '2 weeks · if fetched', body: { start: '2025-10-02', end: '2025-10-15' } },
-]
+/** Laptop-safe windows. synthetic/forge need no download. */
+const WINDOWS: Record<string, { label: string; note: string; body?: Record<string, unknown> }> = {
+  synthetic: { label: 'synthetic', note: 'always ready · no download' },
+  forge: { label: 'forge', note: 'bundled in the package' },
+  moltbook: { label: 'moltbook week', note: 'wave window only · ~330 MB download', body: { start: '2026-02-03', end: '2026-02-09' } },
+  wiki: { label: 'wiki', note: 'collusion.wiki · ~3 MB download' },
+  village: { label: 'village', note: 'needs HF_TOKEN · 2-week window', body: { start: '2025-10-02', end: '2025-10-15' } },
+}
+
+const SOURCE_ORDER = ['synthetic', 'forge', 'wiki', 'moltbook', 'village'] as const
 
 const SPEEDS = [
   { id: 1, label: '1×' },
@@ -315,10 +312,12 @@ function AgentArena({
 
 export function SandboxView() {
   const health = useApiHealth(3000)
+  const [datasets, setDatasets] = useState<DatasetInfo[]>([])
   const [source, setSource] = useState('synthetic')
   const [runId, setRunId] = useState<string | null>(null)
   const [status, setStatus] = useState('idle')
   const [error, setError] = useState<string | null>(null)
+  const [fetching, setFetching] = useState<string | null>(null)
   const [tape, setTape] = useState<ReplayTape | null>(null)
   const [spread, setSpread] = useState<SpreadRow[]>([])
   const [ticks, setTicks] = useState<Tick[]>([])
@@ -328,43 +327,104 @@ export function SandboxView() {
   const [focus, setFocus] = useState('world')
   const boot = useRef(false)
 
-  const start = async (ds: string) => {
-    const preset = SOURCES.find((s) => s.id === ds) ?? SOURCES[0]
-    setSource(ds)
-    setError(null)
-    setStatus('scanning')
-    setTape(null)
-    setSpread([])
-    setTicks([])
-    setCursor(0)
-    setFocus('world')
-    try {
-      const brief = await api<{ id: string }>('/api/runs', {
-        method: 'POST',
-        json: { dataset: ds, wait: true, ...(preset.body ?? {}) },
-      })
-      setRunId(brief.id)
-      const [rep, sp, full] = await Promise.all([
-        api<ReplayTape>(`/api/runs/${brief.id}/replay?max_events=1200&sandboxes=5`),
-        api<SpreadRow[]>(`/api/runs/${brief.id}/spread?top=8`),
-        api<{ result: RunResult | null }>(`/api/runs/${brief.id}`),
-      ])
-      setTape(rep)
-      setSpread(sp)
-      setTicks(full.result?.timeline ?? [])
-      setStatus('ready')
-      setPlaying(true)
-    } catch (e) {
-      setStatus('error')
-      setError(e instanceof Error ? e.message : String(e))
-    }
+  const refreshDatasets = useCallback(() => {
+    return api<DatasetInfo[]>('/api/datasets')
+      .then(setDatasets)
+      .catch(() => undefined)
+  }, [])
+
+  const ready = useCallback(
+    (id: string) => {
+      const d = datasets.find((x) => x.id === id)
+      if (id === 'synthetic' || id === 'forge') return true
+      return Boolean(d?.available)
+    },
+    [datasets],
+  )
+
+  const start = useCallback(
+    async (ds: string) => {
+      const preset = WINDOWS[ds] ?? WINDOWS.synthetic
+      setSource(ds)
+      setError(null)
+      setStatus('scanning')
+      setTape(null)
+      setSpread([])
+      setTicks([])
+      setCursor(0)
+      setFocus('world')
+      try {
+        const brief = await api<{ id: string }>('/api/runs', {
+          method: 'POST',
+          json: { dataset: ds, wait: true, ...(preset.body ?? {}) },
+        })
+        setRunId(brief.id)
+        const [rep, sp, full] = await Promise.all([
+          api<ReplayTape>(`/api/runs/${brief.id}/replay?max_events=1200&sandboxes=5`),
+          api<SpreadRow[]>(`/api/runs/${brief.id}/spread?top=8`),
+          api<{ result: RunResult | null }>(`/api/runs/${brief.id}`),
+        ])
+        setTape(rep)
+        setSpread(sp)
+        setTicks(full.result?.timeline ?? [])
+        setStatus('ready')
+        setPlaying(true)
+      } catch (e) {
+        setStatus('error')
+        setError(e instanceof Error ? e.message : String(e))
+      }
+    },
+    [],
+  )
+
+  const fetchThenPlay = useCallback(
+    async (ds: string) => {
+      setSource(ds)
+      setError(null)
+      setFetching(ds)
+      setStatus('fetching')
+      try {
+        await api(`/api/datasets/${ds}/fetch`, { method: 'POST', json: {} })
+        for (let i = 0; i < 180; i++) {
+          await new Promise((r) => setTimeout(r, 1000))
+          const list = await api<DatasetInfo[]>('/api/datasets')
+          setDatasets(list)
+          const row = list.find((d) => d.id === ds)
+          if (row?.available) {
+            setFetching(null)
+            await start(ds)
+            return
+          }
+          if (row?.fetch?.status === 'error') {
+            throw new Error(row.fetch.error ?? `download failed for ${ds}`)
+          }
+        }
+        throw new Error(`download still running for ${ds} — check the terminal or try again`)
+      } catch (e) {
+        setStatus('error')
+        setError(e instanceof Error ? e.message : String(e))
+        setFetching(null)
+      }
+    },
+    [start],
+  )
+
+  const onPick = (ds: string) => {
+    if (fetching) return
+    if (ready(ds)) void start(ds)
+    else void fetchThenPlay(ds)
   }
+
+  useEffect(() => {
+    if (!health.online) return
+    void refreshDatasets()
+  }, [health.online, refreshDatasets])
 
   useEffect(() => {
     if (!health.online || boot.current) return
     boot.current = true
     void start('synthetic')
-  }, [health.online])
+  }, [health.online, start])
 
   useEffect(() => {
     if (!playing || !tape?.events.length) return
@@ -407,20 +467,30 @@ export function SandboxView() {
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          {SOURCES.map((s) => (
-            <button
-              key={s.id}
-              type="button"
-              title={s.note}
-              onClick={() => void start(s.id)}
-              className={cx(
-                'rounded-lg border px-3 py-1.5 text-[12px]',
-                source === s.id ? 'border-accent bg-panel-2 text-fg' : 'border-line text-muted hover:border-line-2 hover:text-fg',
-              )}
-            >
-              {s.label}
-            </button>
-          ))}
+          {SOURCE_ORDER.map((id) => {
+            const meta = WINDOWS[id]
+            const onDisk = ready(id)
+            const busy = fetching === id
+            return (
+              <button
+                key={id}
+                type="button"
+                title={meta.note}
+                disabled={Boolean(fetching) && !busy}
+                onClick={() => onPick(id)}
+                className={cx(
+                  'inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-[12px]',
+                  source === id ? 'border-accent bg-panel-2 text-fg' : 'border-line text-muted hover:border-line-2 hover:text-fg',
+                  !onDisk && 'border-dashed',
+                  busy && 'opacity-80',
+                )}
+              >
+                {!onDisk && <Download size={12} className={busy ? 'animate-pulse text-accent' : 'text-faint'} />}
+                {busy ? `downloading ${meta.label}…` : meta.label}
+                {onDisk && source !== id && <span className="text-[9px] text-faint">ready</span>}
+              </button>
+            )
+          })}
           <Link to="/live" className="inline-flex items-center gap-1.5 rounded-lg border border-line px-3 py-1.5 text-[12px] text-muted hover:text-fg">
             <Radio size={13} /> detector
           </Link>
@@ -435,10 +505,27 @@ export function SandboxView() {
         </Panel>
       )}
 
+      <Panel pad={false} className="px-3 py-2">
+        <div className="text-[11.5px] text-muted">
+          <span className="text-fg-2">Always ready:</span> synthetic · forge.
+          <span className="ml-2 text-fg-2">One-click download:</span> wiki (~3 MB) · moltbook week (~330 MB).
+          <span className="ml-2 text-fg-2">Village:</span> put <span className="mono text-fg">HF_TOKEN</span> in <span className="mono">.env</span>, then click village (dashed = not on disk yet).
+        </div>
+      </Panel>
+
       {error && (
         <Panel>
           <div className="text-[13px] text-crit">{error}</div>
-          <div className="mt-1 text-[11px] text-faint">If the dataset is missing, fetch it from Detector or stay on synthetic / forge.</div>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <button type="button" className="rounded-lg border border-line px-3 py-1.5 text-[12px] text-fg hover:border-accent" onClick={() => void start('synthetic')}>
+              play synthetic
+            </button>
+            {source !== 'synthetic' && !ready(source) && (
+              <button type="button" className="inline-flex items-center gap-1.5 rounded-lg border border-line px-3 py-1.5 text-[12px] text-fg hover:border-accent" onClick={() => void fetchThenPlay(source)}>
+                <Download size={12} /> download {source} then play
+              </button>
+            )}
+          </div>
         </Panel>
       )}
 
