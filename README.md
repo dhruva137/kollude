@@ -152,6 +152,13 @@ Every headline number has a **baseline** and an **interval**. Alerts need **M �
 
 ---
 
+## Math & research
+
+- [MATH.md](MATH.md) — templates, $C$/$M$, mixture e-values, e-CUSUM, spread, attribution formulas as implemented.
+- [RESEARCH.md](RESEARCH.md) — measured claims, named baselines, honest misses, and explicit non-claims.
+
+---
+
 ## Repository layout
 
 ```
