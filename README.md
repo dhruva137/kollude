@@ -36,7 +36,7 @@ Open **http://127.0.0.1:8787/** — landing page, then **Enter** into the consol
 | `#/backtests` | Measured numbers vs baselines and intervals |
 | `#/atlas` | Incident / dataset registry |
 
-**PyPI:** `pip install kollude` is **coming soon**. Until then, install from this repo (or `pip install "git+https://github.com/dhruva137/kollude.git"` for the CLI without the built site).
+**Install the package:** `pip install kollude` (PyPI) once the release workflow has published. From a checkout: `pip install -e .` (add the web build steps below for the console).
 
 ### Docker (API + built console)
 
