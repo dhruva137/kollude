@@ -1,11 +1,11 @@
 # Publish kollude to PyPI via Trusted Publishing (no long-lived API token).
-# Trigger: GitHub Release published, or manual "Run workflow" on main.
-name: publish
+# PyPI side (Trusted Publisher): owner dhruva137, repository kollude, workflow release.yml, environment pypi.
+# Trigger: GitHub Release published.
+name: release
 
 on:
   release:
     types: [published]
-  workflow_dispatch:
 
 permissions:
   contents: read

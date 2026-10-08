@@ -34,7 +34,7 @@ dependencies = [
 dev = ["pytest>=8.0", "ruff>=0.5"]
 
 [project.urls]
-Homepage = "https://github.com/dhruva137/kollude"
+Homepage = "https://papertoanything.com/products/kollude/"
 Repository = "https://github.com/dhruva137/kollude"
 
 [project.scripts]

@@ -36,7 +36,9 @@ Open **http://127.0.0.1:8787/** — landing page, then **Enter** into the consol
 | `#/backtests` | Measured numbers vs baselines and intervals |
 | `#/atlas` | Incident / dataset registry |
 
-**Install the package:** `pip install kollude` (PyPI) once the release workflow has published. From a checkout: `pip install -e .` (add the web build steps below for the console).
+**Install the package:** `pip install kollude`. From a checkout: `pip install -e .` (add the web build steps below for the console).
+
+**Part of [Paper To Anything](https://papertoanything.com/products/kollude/).**
 
 ### Docker (API + built console)
 
