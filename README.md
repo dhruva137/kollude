@@ -2,7 +2,7 @@
 
 **Swarm-collusion forensics for multi-agent logs.**
 
-kollude reads agent speech (JSONL, CSV, Parquet, or a built-in corpus) and answers three questions a judge can check:
+kollude reads agent speech (JSONL, CSV, Parquet, or a built-in corpus) and answers three questions that can be checked against the data:
 
 1. **Is this a swarm?** Many distinct actors copy a folded template (**M**), and that copying is a large share of the hour (**C**).
 2. **When did it start?** An anytime-valid e-value (e-CUSUM) alarms only when both conditions hold, with false-alarm rate bounded by α under no change (Shin, Ramdas & Rinaldo, 2022).
@@ -10,7 +10,7 @@ kollude reads agent speech (JSONL, CSV, Parquet, or a built-in corpus) and answe
 
 One repository holds the Python detector, the HTTP/SSE API, MCP tools, and the investigator console. `kollude serve` runs API and UI together.
 
-> Built for the [AI Village × Grove Research AI Swarm Dynamics Hackathon](https://swarmchasing.com). Solo submission: **Dhruva P Gowda**
+Part of Paper To Anything (https://papertoanything.com) — research software developed and maintained by Dhruva P Gowda. In development; the project is open source and maintained by one person.
 
 ---
 
@@ -37,8 +37,6 @@ Open **http://127.0.0.1:8787/** — landing page, then **Enter** into the consol
 | `#/atlas` | Incident / dataset registry |
 
 **Install the package:** `pip install kollude`. From a checkout: `pip install -e .` (add the web build steps below for the console).
-
-**Part of [Paper To Anything](https://papertoanything.com/products/kollude/).**
 
 ### Docker (API + built console)
 
@@ -196,3 +194,9 @@ tests/                   pytest
 **Dhruva P Gowda** · [@dhruva137](https://github.com/dhruva137)
 
 Licensed under the **Apache License 2.0** — see [LICENSE](LICENSE) and [NOTICE](NOTICE). You can use and build on the code; you must keep attribution, and the patent grant stays with the project.
+
+---
+
+## Origin
+
+Development started during the AI Village × Grove Research AI Swarm Dynamics event in 2026; it continues as an independent research project.

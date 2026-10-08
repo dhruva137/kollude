@@ -2,7 +2,7 @@
 name = "kollude"
 version = "0.4.0"
 description = "Detect coordinated agent swarms, trace who spread a shared line, and alarm only when multiplicity and copying both show up."
-readme = "README.md"
+readme = "PYPI.md"
 license = "Apache-2.0"
 requires-python = ">=3.11"
 authors = [{ name = "Dhruva P Gowda" }]
@@ -36,6 +36,7 @@ dev = ["pytest>=8.0", "ruff>=0.5"]
 [project.urls]
 Homepage = "https://papertoanything.com/products/kollude/"
 Repository = "https://github.com/dhruva137/kollude"
+Documentation = "https://github.com/dhruva137/kollude#readme"
 
 [project.scripts]
 kollude = "kollude.cli:app"
